@@ -1,0 +1,64 @@
+@use 'fonts' as *;
+
+// common screen sizes
+//mobile 0 - 599px
+// tablet 600px - 900px portrait
+//tablet 900px - 1200px landscape
+//desktop 1200px - 1800px
+//big desktop 1800px
+
+@mixin mobile {
+@media all and (min-width: 320px) and (max-width: 767px) 
+{
+@content;
+}
+}
+
+@mixin tablet {
+    @media all and (min-width: 768px) and (max-width:1279px)
+    {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media all and (min-width:1280px) and (max-width: 1920px)
+    {
+        @content;
+    }
+}
+
+
+@mixin CTA-default{
+    background-color: #323232;
+    color: #FFFFFF;
+} 
+
+@mixin secondary {
+    &:hover {
+    background-color: $bandSite-DarkBlack;
+    color: #FFFFFF;
+}
+}
+
+
+// Desktop & Tablet
+// padding before headline 48px
+// padding after headlines 36px
+// padding between components 36px
+
+
+//Mobile
+// before headlines 24px
+// after headlines 16px
+// between components 16px
+
+// CTA button will stay at 40px through all sizes
+// width will be max of 150px for desktop and tablet. max
+// of 32px padding left and right. Mobile should be 100% of container
+
+// button radius should be 4px
+
+// Check sheet for navbar
+
+// Divider will be stroke width 1px and fill color mercury for all sizes

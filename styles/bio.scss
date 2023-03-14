@@ -1,0 +1,40 @@
+@use './partials/variables' as *;
+@use './partials/fonts' as *;
+@use './partials/mix-ins' as *;
+@use './partials/global' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar__container {
+width: 100%;
+border: 1px solid red;
+background-color: green;
+
+
+    //  @include mobile;
+     @include  tablet {
+        background-color: aqua;
+display:flex;
+}
+     
+    //  @include desktop;
+}
+
+
+.navbar__logo {
+    border: 1 px solid red;
+
+}
+
+.hero__section{
+display: flex;
+flex-direction: column;
+background-color: red;
+}
+
+.hero__title {
+    border: 1 px solid red;
+
+}
