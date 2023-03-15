@@ -19,14 +19,10 @@
   box-sizing: border-box;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .navbar__container {
   width: 100%;
-  border: 1px solid red;
-  background-color: green;
+  background-color: #323232;
+  color: #FFFFFF;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .navbar__container {
@@ -36,15 +32,128 @@
 }
 
 .navbar__logo {
-  border: 1 px solid red;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.navbar__links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 0;
+  list-style-type: none;
+}
+
+.navbar__links {
+  position: relative;
+}
+.navbar__links--active {
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 10px;
+}
+.navbar__links--inactive {
+  color: #AFAFAF;
 }
 
 .hero__section {
   display: flex;
   flex-direction: column;
-  background-color: red;
+  height: 30vh;
+  width: 100%;
+  background-image: url(/Assets/images/hero-bio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero__title {
-  border: 1 px solid red;
+  color: #FFFFFF;
+  margin-top: 20%;
+  margin-left: 5%;
+}
+
+.bio__section {
+  padding: 0 16px;
+}
+
+.bio__header {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.bio__image {
+  background-image: url(/Assets/images/band.jpg);
+  background-size: cover;
+  margin: auto;
+  width: 90vw;
+  height: 30vh;
+  padding-bottom: 16px;
+}
+
+.bio__quote {
+  padding-bottom: 16px;
+}
+.bio__quote--final {
+  padding-top: 5px;
+}
+
+.text__container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.text__header {
+  padding-bottom: 16px;
+}
+
+.text__body {
+  padding-bottom: 16px;
+}
+
+.photos__container {
+  background-color: #FAFAFA;
+}
+
+.photo__header {
+  padding: 24px 16px 16px 16px;
+}
+
+.photo__image {
+  width: 90%;
+  height: 25vh;
+  margin: auto;
+  margin-bottom: 16px;
+  background-size: cover;
+}
+.photo__image--first {
+  background-image: url(/Assets/images/Photo-gallery-1.jpg);
+}
+.photo__image--second {
+  background-image: url(/Assets/images/Photo-gallery-2.jpg);
+}
+.photo__image--third {
+  background-image: url(/Assets/images/Photo-gallery-3.jpg);
+}
+.photo__image--fourth {
+  background-image: url(/Assets/images/Photo-gallery-4.jpg);
+}
+.photo__image--fifth {
+  background-image: url(/Assets/images/Photo-gallery-5.jpg);
+}
+.photo__image--sixth {
+  background-image: url(/Assets/images/Photo-gallery-6.jpg);
+}
+.photo__image--seventh {
+  background-image: url(/Assets/images/Photo-gallery-7.jpg);
+}
+.photo__image--eighth {
+  background-image: url(/Assets/images/Photo-gallery-8.jpg);
+}
+.photo__image--ninth {
+  background-image: url(/Assets/images/Photo-gallery-9.jpg);
+}
+
+.footer__container {
+  background-color: #323232;
+  color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */

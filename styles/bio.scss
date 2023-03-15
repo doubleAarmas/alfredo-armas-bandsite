@@ -3,14 +3,10 @@
 @use './partials/mix-ins' as *;
 @use './partials/global' as *;
 
-* {
-    box-sizing: border-box;
-}
-
 .navbar__container {
 width: 100%;
-border: 1px solid red;
-background-color: green;
+background-color: $primary-background--dark;
+color: $text-color--primary;
 
 
     //  @include mobile;
@@ -24,17 +20,151 @@ display:flex;
 
 
 .navbar__logo {
-    border: 1 px solid red;
-
+display: flex;
+justify-content: center;
+padding: 10px 0;
 }
 
+.navbar__links-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+    list-style-type: none;
+}
+
+.navbar__links {
+    position: relative;
+
+    
+    &--active {
+        border-bottom: 1px solid $text-color--primary;
+        padding-bottom: 10px;
+
+    }
+
+    &--inactive {
+        color: $text-color--secondary;
+
+    }
+}
+
+//hero section begins
 .hero__section{
 display: flex;
 flex-direction: column;
-background-color: red;
+height: 30vh;
+width: 100%;
+background-image: url(/Assets/images/hero-bio.jpg);
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 .hero__title {
-    border: 1 px solid red;
-
+    color: $text-color--primary;
+    margin-top: 20%;
+    margin-left: 5%;
+    
 }
+
+// Bio section begins
+
+.bio__section {
+    padding: 0 16px;
+}
+
+.bio__header {
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+
+.bio__image {
+    background-image: url(/Assets/images/band.jpg);
+    background-size: cover;
+    margin: auto;
+    width: 90vw;
+    height: 30vh;
+    padding-bottom: 16px;
+}
+
+.bio__quote {
+    padding-bottom: 16px;
+
+
+    &--final {
+        padding-top: 5px;
+    }
+}
+
+//text body
+
+.text__container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.text__header {
+    padding-bottom: 16px;
+}
+
+.text__body {
+    padding-bottom: 16px;
+}
+
+
+//photo gallery
+
+.photos__container {
+    background-color: $alternative-background;
+}
+
+.photo__header{
+    padding: 24px 16px 16px 16px;
+}
+
+.photo__image {
+width: 90%;
+height: 25vh;
+margin: auto;
+margin-bottom: 16px;
+background-size: cover;
+    &--first {
+        background-image: url(/Assets/images/Photo-gallery-1.jpg);
+    }
+    &--second {
+        background-image: url(/Assets/images/Photo-gallery-2.jpg);
+    }
+    &--third {
+        background-image: url(/Assets/images/Photo-gallery-3.jpg);
+    }
+    &--fourth {
+        background-image: url(/Assets/images/Photo-gallery-4.jpg);
+    }
+    &--fifth {
+        background-image: url(/Assets/images/Photo-gallery-5.jpg);
+    }
+    &--sixth {
+        background-image: url(/Assets/images/Photo-gallery-6.jpg);
+    }
+    &--seventh {
+        background-image: url(/Assets/images/Photo-gallery-7.jpg);
+    }
+    &--eighth {
+        background-image: url(/Assets/images/Photo-gallery-8.jpg);
+    }
+    &--ninth {
+        background-image: url(/Assets/images/Photo-gallery-9.jpg);
+    }
+}
+
+//footer section begins
+
+.footer__container {
+    background-color: $primary-background--dark;
+    color: $text-color--primary;
+}
+
+// .social__icon-container {
+
+    
+// }
