@@ -1,0 +1,116 @@
+@use './mix-ins' as *;
+
+
+@font-face { 
+    font-family: 'Avenir Next';
+    src: url('/Assets/fonts/AvenirNextLTPro-Bold.otf') format("opentype");
+    src: url('/Assets/fonts/AvenirNextLTProBold.ttf') format("opentype");
+    font-style: normal;
+    font-weight: 700;
+} 
+
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('/Assets/fonts/AvenirNextLTPro-Demi.otf') format("opentype");
+    src: url('/Assets/fonts/AvenirNextLTProDemi.ttf') format("opentype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('/Assets/fonts/AvenirNextLTPro-Regular.otf') format("opentype");
+    src: url('/Assets/fonts/AvenirNextLTPro.ttf') format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+// mobile text styles
+
+.page__header {
+
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    font-family: 'Avenir Next';
+    
+    @include tablet {
+        font-size: 60px;
+        line-height: 68px;
+}
+    @include desktop {
+        font-size: 60px;
+        line-height: 68px;
+    }
+}
+
+
+.section__header {
+
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    font-family: 'Avenir Next';
+    @include tablet {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    @include desktop {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+.section__subheader {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    font-family: 'Avenir Next';
+    @include tablet {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    @include desktop {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+.label__header {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+    font-family: 'Avenir Next';
+}
+
+p {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    font-family: 'Avenir Next';
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    @include desktop {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+footer p {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    font-family: 'Avenir Next';
+    @include tablet {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @include desktop {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

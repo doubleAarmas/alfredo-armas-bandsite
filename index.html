@@ -11,10 +11,12 @@
   <header>
     <navbar class="navbar">
       <div class="navbar__container">
-        <logo class="navbar__logo">Bandsite</logo>
+        <div class="navbar__logo-container">
+        <a href="/index.html"><img src="/Assets/logos/Logo-bandsite.svg" class="navbar__logo"></logo>
+        </a></div>
         <ul class="navbar__links-container">
-          <li class="navbar__links--active">Biography</li>
-          <li class="navbar__links--inactive">Shows</li>
+          <li class="navbar__links navbar__links--active section__subheader">Biography</li>
+          <li class="navbar__links navbar__links--inactive section__subheader">Shows</li>
         </ul>
       </div>
     </navbar>
@@ -22,14 +24,15 @@
   <body>
     <section class="hero__section">
       <div>
-        <h2 class="hero__title">The Bees Knees</h2>
-        <div class="hero__title--background"></div>
+        <div class="hero__section--overlay">
+          <h2 class="hero__title section__header">The Bees Knees</h2>
       </div>
+    </div>
     </section>
 
     <section class="bio__section">
       <div>
-        <h2 class="bio__header">About the Musicians</h2>
+        <h2 class="bio__header section__header">About the Musicians</h2>
       </div>
       <div class="bio__image"></div>
       <div class="bio__quote">
@@ -44,8 +47,8 @@
     </section>
     <section>
       <div class="text__container">
-        <h3 class="text__header">The Bees Knees</h3>
-        <p class="text__body">
+        <h3 class="text__section section__subheader">The Bees Knees</h3>
+        <p class="text__section">
           The Bees Knees is a pop rock band originating from San Francisco,
           California. The band consists of lead vocalist Bryan Teddy, guitarist
           Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer
@@ -56,7 +59,7 @@
           pushing them to sign with Magenta Records.
         </p>
         <br />
-        <p class="text__body">
+        <p class="text__section">
           From there, the band has soared, gaining international recognition and
           ranking in the top 10 on the Poster Charts. New fans immediately fell
           in love with the band’s original and organic attitude, solidifying
@@ -71,20 +74,21 @@
     </section>
     <section>
       <div class="photos__container">
-        <h2 class="photo__header">Photo Gallery</h2>
-<div class="photo__image photo__image--first"></div>
-<div class="photo__image photo__image--second"></div>
-<div class="photo__image photo__image--third"></div>
-<div class="photo__image photo__image--fourth"></div>
-<div class="photo__image photo__image--fifth"></div>
-<div class="photo__image photo__image--sixth"></div>
-<div class="photo__image photo__image--seventh"></div>
-<div class="photo__image photo__image--eighth"></div>
-<div class="photo__image photo__image--ninth"></div>
+        <h2 class="photo__header section__header">Photo Gallery</h2>
+<img src="/Assets/images/Photo-gallery-1.jpg" alt="concert-image" class="photo__image">
+<img src="/Assets/images/Photo-gallery-2.jpg" alt="concert-image" class="photo__image">
+<img src="/Assets/images/Photo-gallery-3.jpg" alt="concert-image" class="photo__image">
+<img src="/Assets/images/Photo-gallery-4.jpg" alt="concert-image" class="photo__image">
+<img src="/Assets/images/Photo-gallery-5.jpg" alt="concert-image" class="photo__image">
+<img src="/Assets/images/Photo-gallery-6.jpg" alt="concert-image" class="photo__image">
+<img src="/Assets/images/Photo-gallery-7.jpg" alt="concert-image" class="photo__image">
+<img src="/Assets/images/Photo-gallery-8.jpg" alt="concert-image" class="photo__image">
+<img src="/Assets/images/Photo-gallery-9.jpg" alt="concert-image" class="photo__image">
+</div>
     </section>
     <section>
       <div class="footer__container">
-        <h2>Get in Touch</h2>
+        <h2 class="footer__header section__header">Get in Touch</h2>
         <div class="social__icon-container">
         <a href="#" alt="instagram"
         class="social__icon social__icon--instagram">
@@ -99,32 +103,51 @@
       <img src="/Assets/icons/Icon-twitter.svg" alt="twitter">
     </a>
     </div>
-    <h3>Cam Adams</h3>
-    <h3>The Bees Knees Management</h3>
-    <address>
+    <div class="footer__contacts-container">
+      <div class="footer__contact footer__contact--primary">
+    <h3 class="section__subheader">Cam Adams</h3>
+    <h3 class="section__subheader">The Bees Knees Management</h3>
+  </div>
+  <div class="footer__contact footer__contact--address">
+    <address class="footer__contact--address">
       <p>503 Broadway Penthouse</p>
       <p>New York, NY 10012, USA</p>
     </address>
+  </div>
+  <div class="footer__contact">
     <email>
-      <a href=mailto:"info@thebeesknees.com">info@thebeesknees.com</a>
+      <a href=mailto:"info@thebeesknees.com" class="footer__contact footer__contact--emails">info@thebeesknees.com</a>
     </email>
-    <h3>Pearl Gregg</h3>
-    <h3>Limitless Artist Group</h3>
+  </div>
+  <div class="footer__contact footer__contact--primary">
+    <h3 class="section__subheader">Pearl Gregg</h3>
+    <h3 class="section__subheader">Limitless Artist Group</h3>
+  </div>
+  <div class="footer__contact">
     <p>Booking Agent for</p>
     <p>US / South America / Japan</p>
-    <a href=mailto:"pearl.gregg@limitlessag.com">pearl.gregg@limitlessag.com</a>
-    <h3>Carson Whyte</h3>
-    <h3>ARCH Entertainment</h3>
+  </div>
+  <div class="footer__contact">
+    <a href=mailto:"pearl.gregg@limitlessag.com" class="footer__contact footer__contact--emails">pearl.gregg@limitlessag.com</a>
+  </div>
+  <div class="footer__contact footer__contact--primary">
+    <h3 class="section__subheader">Carson Whyte</h3>
+    <h3 class="section__subheader">ARCH Entertainment</h3>
+  </div>
+  <div class="footer__contact">
     <p>Booking Agent for</p>
     <p>UK / EU / AU</p>
-    <a href=mailto:"cwhyte@archentertainment.com">cwhyte@archentertainment.com</a>
+  </div>
+  <div class="footer__contact">
+    <a href=mailto:"cwhyte@archentertainment.com" class="footer__contact footer__contact--emails">cwhyte@archentertainment.com</a>
+  </div>
     <div>
-    <logo class="footer__logo">Bandsite</logo>
-    <p>Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
+      <img src="/Assets/logos/Logo-bandsite.svg" class="navbar__logo--footer" >
+      <p class="footer__contact footer__contact--closing">Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
   </div>
       </div>
 
-
+    </div>
     </section>
     <script src="" async defer></script>
   </body>

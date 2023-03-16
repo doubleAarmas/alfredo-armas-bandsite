@@ -1,3 +1,9 @@
+@use '../partials/mix-ins' as *;
+@use '../partials/variables' as *;
+@use '../partials/typography' as *;
+
+
+
 * {
     padding: 0;
     margin: 0;

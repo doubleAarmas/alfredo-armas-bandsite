@@ -1,7 +1,8 @@
-@use './partials/variables' as *;
-@use './partials/fonts' as *;
-@use './partials/mix-ins' as *;
-@use './partials/global' as *;
+@use '../styles/partials/global';
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mix-ins' as *;
+@use '../styles/partials/typography' as *;
+
 
 .navbar__container {
 width: 100%;
@@ -11,60 +12,127 @@ color: $text-color--primary;
 
     //  @include mobile;
      @include  tablet {
-        background-color: aqua;
-display:flex;
+        display:flex;
 }
      
-    //  @include desktop;
+     @include desktop {
+        display:flex;
+     }
 }
 
+.navbar__logo-container{
+    width: 100%;
+
+    @include tablet {
+        width: 30%;
+    } 
+
+    @include desktop {
+        width: 30%;
+    }
+}
 
 .navbar__logo {
-display: flex;
-justify-content: center;
-padding: 10px 0;
+height: 8vh;
+width: 100%;
+padding: 16px;
+margin:16px 0;
 }
 
 .navbar__links-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 10px 0;
+    justify-content: space-between;
     list-style-type: none;
+    text-align: center;
+    width: 100%;
+
+    @include tablet {
+        width: 20%;
+        max-width: 20%;
+    }
+
+    @include desktop {
+        width: 20%;
+        max-width: 20%;
+    }
 }
 
 .navbar__links {
     position: relative;
+    width: 100%;
 
+    @include tablet {
+        //this is affecting the border line
+        margin: auto;
+    }
+    @include desktop {
+                //this is affecting the border line
+        margin: auto;
+    }
     
     &--active {
-        border-bottom: 1px solid $text-color--primary;
+        border-bottom: 4px solid $text-color--primary;
         padding-bottom: 10px;
+        width: 100%;
+        max-width: 100%;
+
+        @include tablet {
+            padding: 0 16px 0 0;
+            width: 45%;
+            max-width: 45%;
+            
+        }
+
+        @include desktop {
+            padding: 0 16px 0 0;
+            width: 25%;
+            max-width: 25%;
+        }
 
     }
 
     &--inactive {
         color: $text-color--secondary;
 
+        &:hover {
+            border-bottom: 4px solid $text-color--primary;
+        padding-bottom: 10px;
+        width: 100%;
+        }
     }
+    
 }
 
 //hero section begins
 .hero__section{
 display: flex;
 flex-direction: column;
-height: 30vh;
-width: 100%;
+height: 60vw;
+ width: 100%;
 background-image: url(/Assets/images/hero-bio.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 }
 
+.hero__section--overlay {
+    display: flex;
+    flex-direction: column;
+    background-color: #32323280;
+    height: 60vw;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 16px;
+
+}
+
 .hero__title {
     color: $text-color--primary;
-    margin-top: 20%;
-    margin-left: 5%;
     
+    // padding: 20%;
+    @include tablet {
+        margin-left: 20%;
+    }
 }
 
 // Bio section begins
@@ -83,12 +151,12 @@ background-size: cover;
     background-size: cover;
     margin: auto;
     width: 90vw;
-    height: 30vh;
+    height: 60vw;
     padding-bottom: 16px;
 }
 
 .bio__quote {
-    padding-bottom: 16px;
+    padding: 16px 0;
 
 
     &--final {
@@ -99,18 +167,12 @@ background-size: cover;
 //text body
 
 .text__container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px
 }
 
-.text__header {
+.text__section {
     padding-bottom: 16px;
 }
-
-.text__body {
-    padding-bottom: 16px;
-}
-
 
 //photo gallery
 
@@ -123,38 +185,12 @@ background-size: cover;
 }
 
 .photo__image {
-width: 90%;
-height: 25vh;
-margin: auto;
+width: 100%;
+height: 60vw;
+padding: 0 16px;
 margin-bottom: 16px;
 background-size: cover;
-    &--first {
-        background-image: url(/Assets/images/Photo-gallery-1.jpg);
-    }
-    &--second {
-        background-image: url(/Assets/images/Photo-gallery-2.jpg);
-    }
-    &--third {
-        background-image: url(/Assets/images/Photo-gallery-3.jpg);
-    }
-    &--fourth {
-        background-image: url(/Assets/images/Photo-gallery-4.jpg);
-    }
-    &--fifth {
-        background-image: url(/Assets/images/Photo-gallery-5.jpg);
-    }
-    &--sixth {
-        background-image: url(/Assets/images/Photo-gallery-6.jpg);
-    }
-    &--seventh {
-        background-image: url(/Assets/images/Photo-gallery-7.jpg);
-    }
-    &--eighth {
-        background-image: url(/Assets/images/Photo-gallery-8.jpg);
-    }
-    &--ninth {
-        background-image: url(/Assets/images/Photo-gallery-9.jpg);
-    }
+   
 }
 
 //footer section begins
@@ -164,7 +200,39 @@ background-size: cover;
     color: $text-color--primary;
 }
 
-// .social__icon-container {
+.footer__header {
+    padding: 24px 16px 16px 16px;
+}
 
+ .social__icon-container {
+padding-bottom: 16px;
+display: flex;
+width: 33vw;
+justify-content: space-between;
+ }
+
+  .social__icon {
+     padding-left: 16px;
+  }
+
+  .footer__contacts-container {
+    padding: 0 0 16px 16px;
+  }
+
+  .footer__contact {
+    padding-bottom: 16px;
     
-// }
+    &--address {
+        font-style: normal;
+    }
+    &--emails {
+        text-decoration: none;
+        color: white;
+    }
+  }
+
+.navbar__logo--footer {
+    padding-bottom: 16px;
+}
+
+
