@@ -78,6 +78,21 @@
     }
 }
 
+.navbar__subheader {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    font-family: 'Avenir Next';
+    @include tablet {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    @include desktop {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
 .label__header {
     font-size: 10px;
     line-height: 20px;
@@ -114,3 +129,36 @@ footer p {
         line-height: 20px;
     }
 }
+
+//affects the actual text in the quote
+.bio__quote--text {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    @include tablet {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    
+}
+    @include desktop {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 600;
+    }
+}
+
+.bio__quote--final {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    @include tablet {
+        font-size: 16px;
+        font-weight: 600;
+}
+    @include desktop {
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+

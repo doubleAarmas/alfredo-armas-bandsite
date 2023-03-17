@@ -76,6 +76,25 @@
   }
 }
 
+.navbar__subheader {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  font-family: "Avenir Next";
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .navbar__subheader {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .navbar__subheader {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
 .label__header {
   font-size: 10px;
   line-height: 20px;
@@ -121,6 +140,44 @@ footer p {
   }
 }
 
+.bio__quote--text {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .bio__quote--text {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .bio__quote--text {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+  }
+}
+
+.bio__quote--final {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .bio__quote--final {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .bio__quote--final {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -148,7 +205,7 @@ footer p {
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .navbar__logo-container {
-    width: 30%;
+    width: 25%;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
@@ -174,29 +231,28 @@ footer p {
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .navbar__links-container {
-    width: 20%;
-    max-width: 20%;
+    width: 40%;
+    max-width: 40%;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .navbar__links-container {
-    width: 20%;
-    max-width: 20%;
+    width: 30%;
+    max-width: 30%;
   }
 }
 
 .navbar__links {
-  position: relative;
   width: 100%;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .navbar__links {
-    margin: auto;
+    margin: 10% 0 0 15%;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .navbar__links {
-    margin: auto;
+    margin-top: 8%;
   }
 }
 .navbar__links--active {
@@ -208,15 +264,15 @@ footer p {
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .navbar__links--active {
     padding: 0 16px 0 0;
-    width: 45%;
-    max-width: 45%;
+    width: 40%;
+    max-width: 40%;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .navbar__links--active {
     padding: 0 16px 0 0;
-    width: 25%;
-    max-width: 25%;
+    width: 40%;
+    max-width: 40%;
   }
 }
 .navbar__links--inactive {
@@ -225,7 +281,8 @@ footer p {
 .navbar__links--inactive:hover {
   border-bottom: 4px solid #FFFFFF;
   padding-bottom: 10px;
-  width: 100%;
+  width: 30%;
+  max-width: 30%;
 }
 
 .hero__section {
@@ -256,38 +313,139 @@ footer p {
     margin-left: 20%;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .hero__title {
+    margin-left: 10%;
+    margin-bottom: 2%;
+    font-size: 55px;
+  }
+}
 
 .bio__section {
   padding: 0 16px;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .bio__section {
+    padding: 0 36px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .bio__section {
+    padding: 0 36px;
+  }
 }
 
 .bio__header {
   padding-top: 24px;
   padding-bottom: 16px;
 }
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .bio__header {
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .bio__header {
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+}
 
 .bio__image {
-  background-image: url(/Assets/images/band.jpg);
-  background-size: cover;
-  margin: auto;
   width: 90vw;
   height: 60vw;
-  padding-bottom: 16px;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .bio__image {
+    padding: 0 50px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .bio__image {
+    padding: 0 80px;
+  }
 }
 
 .bio__quote {
   padding: 16px 0;
+  width: 100%;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .bio__quote {
+    width: 95%;
+    padding: 36px 0 36px 7%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .bio__quote {
+    width: 75%;
+    padding: 36px 0 36px 7%;
+  }
 }
 .bio__quote--final {
   padding-top: 5px;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .bio__quote--final {
+    padding-top: 2%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .bio__quote--final {
+    padding-top: 2%;
+  }
+}
+
+.section__subheader {
+  padding-left: 16px;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .section__subheader {
+    padding-left: 85px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .section__subheader {
+    padding-left: 120px;
+  }
 }
 
 .text__container {
   padding: 0 16px;
 }
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .text__container {
+    display: flex;
+    padding: 0 85px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .text__container {
+    display: flex;
+    padding: 0 120px 20px 120px;
+    width: 95%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .text__section--lower {
+    padding-left: 20px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .text__section--lower {
+    padding-left: 30px;
+  }
+}
 
 .text__section {
   padding-bottom: 16px;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .text__section {
+    display: flex;
+  }
 }
 
 .photos__container {
