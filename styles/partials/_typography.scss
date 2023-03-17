@@ -68,13 +68,17 @@
     line-height: 22px;
     font-weight: 600;
     font-family: 'Avenir Next';
+    padding-left: 16px;
     @include tablet {
         font-size: 24px;
         line-height: 32px;
+        padding-left: 85px;
+
     }
     @include desktop {
         font-size: 24px;
         line-height: 32px;
+        padding-left: 120px;
     }
 }
 
@@ -128,6 +132,10 @@ footer p {
         font-size: 14px;
         line-height: 20px;
     }
+}
+
+.footer__subheader {
+    font-weight: 600;
 }
 
 //affects the actual text in the quote

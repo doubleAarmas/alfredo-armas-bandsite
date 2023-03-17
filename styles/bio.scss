@@ -207,15 +207,7 @@ background-size: cover;
 
 //text body
 
-.section__subheader {
-    padding-left: 16px;
-    @include tablet {
-        padding-left: 85px;
-    }
-    @include desktop {
-        padding-left: 120px;
-    }
-}
+
 
 .text__container {
     padding: 0 16px;
@@ -248,12 +240,38 @@ background-size: cover;
 
 //photo gallery
 
-.photos__container {
+.photos__section {
     background-color: $alternative-background;
+
+    @include tablet {
+        padding-bottom: 3%;
+    }
+    @include desktop {
+        padding-bottom: 1.5%;
+    }
+}
+
+.photo__gallery-container {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .photo__header{
     padding: 24px 16px 16px 16px;
+    @include tablet {
+        padding: 24px 16px 16px 56px;
+    }
+    @include desktop {
+        padding: 3% 6%;
+    }
 }
 
 .photo__image {
@@ -263,6 +281,16 @@ padding: 0 16px;
 margin-bottom: 16px;
 background-size: cover;
    
+@include tablet {
+    width: 30%;
+    height: 20vw;
+    background-size: cover;
+}
+@include desktop {
+    width: 30%;
+    height: 20vw;
+    background-size: cover;
+}
 }
 
 //footer section begins
@@ -270,17 +298,48 @@ background-size: cover;
 .footer__container {
     background-color: $primary-background--dark;
     color: $text-color--primary;
+    @include tablet {
+        position: relative;
+    }
+    @include desktop {
+        position: relative;
+    }
+}
+
+.footer__container--social {
+    @include tablet {
+        display: flex;
+        align-items: center;
+    }
+    @include desktop {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .footer__header {
     padding: 24px 16px 16px 16px;
+    @include tablet {
+        padding: 24px 16px 16px 25px;
+    }
+    @include desktop {
+        padding: 24px 16px 16px 25px;
+    }
 }
 
  .social__icon-container {
-padding-bottom: 16px;
-display: flex;
-width: 33vw;
-justify-content: space-between;
+    padding-bottom: 16px;
+    display: flex;
+    width: 40vw;
+    justify-content: space-between;
+    @include tablet {
+        padding: 0 0 0 5px;
+        width: 20vw;
+    }
+    @include desktop {
+        padding-bottom: 0;//add some here
+        width: 20vw;
+    }
  }
 
   .social__icon {
@@ -289,7 +348,20 @@ justify-content: space-between;
 
   .footer__contacts-container {
     padding: 0 0 16px 16px;
+    @include tablet {
+        display: flex;
+        justify-content: space-around;
+    }
   }
+
+ .footer__management {
+     @include tablet {
+        width: 30vw;
+    }
+    @include desktop {
+        display: flex;
+    }
+ }
 
   .footer__contact {
     padding-bottom: 16px;
@@ -305,6 +377,19 @@ justify-content: space-between;
 
 .navbar__logo--footer {
     padding-bottom: 16px;
+    @include tablet {
+        position: absolute;
+        left: 80%;
+        bottom: 80%;
+    }
 }
 
+.footer__logo {
+    padding: 0 0 16px 16px;
+}
 
+.footer__contact--closing {
+    @include tablet {
+        padding-left: 10px;
+    }
+}

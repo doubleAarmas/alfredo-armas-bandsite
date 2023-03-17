@@ -62,17 +62,20 @@
   line-height: 22px;
   font-weight: 600;
   font-family: "Avenir Next";
+  padding-left: 16px;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .section__subheader {
     font-size: 24px;
     line-height: 32px;
+    padding-left: 85px;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .section__subheader {
     font-size: 24px;
     line-height: 32px;
+    padding-left: 120px;
   }
 }
 
@@ -138,6 +141,10 @@ footer p {
     font-size: 14px;
     line-height: 20px;
   }
+}
+
+.footer__subheader {
+  font-weight: 600;
 }
 
 .bio__quote--text {
@@ -397,20 +404,6 @@ footer p {
   }
 }
 
-.section__subheader {
-  padding-left: 16px;
-}
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  .section__subheader {
-    padding-left: 85px;
-  }
-}
-@media all and (min-width: 1280px) and (max-width: 1920px) {
-  .section__subheader {
-    padding-left: 120px;
-  }
-}
-
 .text__container {
   padding: 0 16px;
 }
@@ -448,12 +441,47 @@ footer p {
   }
 }
 
-.photos__container {
+.photos__section {
   background-color: #FAFAFA;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .photos__section {
+    padding-bottom: 3%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .photos__section {
+    padding-bottom: 1.5%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .photo__gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .photo__gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .photo__header {
   padding: 24px 16px 16px 16px;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .photo__header {
+    padding: 24px 16px 16px 56px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .photo__header {
+    padding: 3% 6%;
+  }
 }
 
 .photo__image {
@@ -463,21 +491,80 @@ footer p {
   margin-bottom: 16px;
   background-size: cover;
 }
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .photo__image {
+    width: 30%;
+    height: 20vw;
+    background-size: cover;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .photo__image {
+    width: 30%;
+    height: 20vw;
+    background-size: cover;
+  }
+}
 
 .footer__container {
   background-color: #323232;
   color: #FFFFFF;
 }
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .footer__container {
+    position: relative;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .footer__container {
+    position: relative;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .footer__container--social {
+    display: flex;
+    align-items: center;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .footer__container--social {
+    display: flex;
+    align-items: center;
+  }
+}
 
 .footer__header {
   padding: 24px 16px 16px 16px;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .footer__header {
+    padding: 24px 16px 16px 25px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .footer__header {
+    padding: 24px 16px 16px 25px;
+  }
 }
 
 .social__icon-container {
   padding-bottom: 16px;
   display: flex;
-  width: 33vw;
+  width: 40vw;
   justify-content: space-between;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .social__icon-container {
+    padding: 0 0 0 5px;
+    width: 20vw;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .social__icon-container {
+    padding-bottom: 0;
+    width: 20vw;
+  }
 }
 
 .social__icon {
@@ -486,6 +573,23 @@ footer p {
 
 .footer__contacts-container {
   padding: 0 0 16px 16px;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .footer__contacts-container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .footer__management {
+    width: 30vw;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .footer__management {
+    display: flex;
+  }
 }
 
 .footer__contact {
@@ -501,4 +605,21 @@ footer p {
 
 .navbar__logo--footer {
   padding-bottom: 16px;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .navbar__logo--footer {
+    position: absolute;
+    left: 80%;
+    bottom: 80%;
+  }
+}
+
+.footer__logo {
+  padding: 0 0 16px 16px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .footer__contact--closing {
+    padding-left: 10px;
+  }
 }/*# sourceMappingURL=bio.css.map */
