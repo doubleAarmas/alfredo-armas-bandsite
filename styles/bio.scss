@@ -8,13 +8,9 @@
 width: 100%;
 background-color: $primary-background--dark;
 color: $text-color--primary;
-
-
-    //  @include mobile;
      @include  tablet {
         display:flex;
 }
-     
      @include desktop {
         display:flex;
      }
@@ -22,11 +18,9 @@ color: $text-color--primary;
 
 .navbar__logo-container{
     width: 100%;
-
     @include tablet {
         width: 25%;
     } 
-
     @include desktop {
         width: 30%;
     }
@@ -35,8 +29,8 @@ color: $text-color--primary;
 .navbar__logo {
 height: 8vh;
 width: 100%;
-padding: 16px;
-margin:16px 0;
+padding: 1rem;
+margin:1rem 0;
 }
 
 .navbar__links-container{
@@ -53,57 +47,47 @@ margin:16px 0;
     }
 
     @include desktop {
-        width: 30%;
-        max-width: 30%;
+        width: 20%;
+        max-width: 20%;
     }
 }
 
 .navbar__links {
     width: 100%;
-
     @include tablet {
         //this is affecting the border line
         margin: 10% 0 0 15%;
     }
     @include desktop {
-                //this is affecting the border line
+        //this is affecting the border line
         margin-top: 8%;
     }
-    
     &--active {
         border-bottom: 4px solid $text-color--primary;
-        padding-bottom: 10px;
+        padding-bottom: .625rem;
         width: 100%;
         max-width: 100%;
-
         @include tablet {
-            padding: 0 16px 0 0;
-            width: 40%;
-            max-width: 40%;
-            
+            padding: 0 1rem 0 0;
+            width: 30%;
+            max-width: 30%;
         }
-
         @include desktop {
-            padding: 0 16px 0 0;
+            padding: 0 1rem 0 0;
             width: 40%;
             max-width: 40%;
         }
-
     }
-
     &--inactive {
         color: $text-color--secondary;
-
         &:hover {
             border-bottom: 4px solid $text-color--primary;
-        padding-bottom: 10px;
-        width: 30%;
-        max-width: 30%;
+        padding-bottom: .625rem;
+        width: 40%;
+        max-width: 40%;
         }
     }
-    
 }
-
 //hero section begins
 .hero__section{
 display: flex;
@@ -114,7 +98,6 @@ background-image: url(/Assets/images/hero-bio.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 }
-
 .hero__section--overlay {
     display: flex;
     flex-direction: column;
@@ -122,80 +105,68 @@ background-size: cover;
     height: 60vw;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 16px;
-
+    padding-left: 1rem;
 }
-
 .hero__title {
     color: $text-color--primary;
-    
-    // padding: 20%;
     @include tablet {
         margin-left: 20%;
     }
     @include desktop {
         margin-left: 10%;
         margin-bottom: 2%;
-        font-size: 55px;
+        font-size: 3.4375rem;
     }
 }
-
 // Bio section begins
-
 .bio__section {
-    padding: 0 16px;
+    padding: 0 1rem;
     @include tablet {
-        padding: 0 36px;
+        padding: 0 2.25rem;
     }
     @include desktop {
-        padding: 0 36px;
+        padding: 0 2.25rem;
+        position: relative;   
+}
     }
-    }
-
-
 .bio__header {
-    padding-top: 24px;
-    padding-bottom: 16px;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
     @include tablet {
-        padding-top: 48px;
-        padding-bottom: 36px;
+        padding-top: 3rem;
+        padding-bottom: 2.25rem;
     }
     @include desktop {
-        padding-top: 48px;
-        padding-bottom: 36px;
+        padding: 3rem 0 2.25rem 2.5rem;
     }
 }
-
 .bio__image {
     width: 90vw;
     height: 60vw;
-
-
     @include tablet {
-        padding: 0 50px;
+        padding: 0 3.125rem;
     }
-
     @include desktop {
-        padding: 0 80px;
+        width: 80vw;
+        padding: 0 2.25rem 0 6.25rem;
+        margin-left: 2%;
+        height: 50vw;
     }
 }
 //spacing of the actual quote box
 .bio__quote {
-    padding: 16px 0;
+    padding: 1rem 0;
     width: 100%;
-    
     @include tablet {
         width: 95%;
-        padding: 36px 0 36px 7%;
+        padding: 2.25rem 0 2.25rem 7%;
     }
     @include desktop {
-        width: 75%;
-        padding: 36px 0 36px 7%;
+        width: 62%;
+        padding-left: 10%;
     }
-
-
     &--final {
-        padding-top: 5px;
+        padding-top: .3125rem;
         @include tablet {
             padding-top: 2%;
         }
@@ -204,45 +175,54 @@ background-size: cover;
         }
     }
 }
-
+.bio__quote--text {
+    @include desktop{
+        font-size: 1.25rem;
+        word-spacing: .125rem;
+    }
+}
 //text body
-
-
-
 .text__container {
-    padding: 0 16px;
+    padding: 0 1rem;
     @include tablet {
         display: flex;
-        padding: 0 85px;
+        padding: 0 5.3125rem;
+        text-align: left;
     }
     @include desktop {
         display: flex;
-        padding: 0 120px 20px 120px;
-        width: 95%;
+        padding: 0 7.5rem 1.25rem 10rem;
+        width: 90%;
+        text-align: left;
     }
 }
-
 .text__section--lower {
     @include tablet {
-        padding-left: 20px;
+        padding-left: 1.25rem;
+        text-align: left;
     }
     @include desktop {
-        padding-left: 30px;
+        padding-left: 2.1875rem;
+        text-align: left;
     }
 }
-
+.text__subheader {
+    @include desktop {
+        padding: 2.5% 0 0 3%;
+    }
+}
 .text__section {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
     @include tablet {
         display: flex;
     }
+    @include desktop{
+        display:flex;
+    }
 }
-
 //photo gallery
-
 .photos__section {
     background-color: $alternative-background;
-
     @include tablet {
         padding-bottom: 3%;
     }
@@ -250,7 +230,6 @@ background-size: cover;
         padding-bottom: 1.5%;
     }
 }
-
 .photo__gallery-container {
     @include tablet {
         display: flex;
@@ -263,24 +242,21 @@ background-size: cover;
         justify-content: center;
     }
 }
-
 .photo__header{
-    padding: 24px 16px 16px 16px;
+    padding: 1.5rem 1rem 1rem 1rem;
     @include tablet {
-        padding: 24px 16px 16px 56px;
+        padding: 1.5rem 1rem 1rem 3.5rem;
     }
     @include desktop {
         padding: 3% 6%;
     }
 }
-
 .photo__image {
 width: 100%;
 height: 60vw;
-padding: 0 16px;
-margin-bottom: 16px;
+padding: 0 1rem;
+margin-bottom: 1rem;
 background-size: cover;
-   
 @include tablet {
     width: 30%;
     height: 20vw;
@@ -292,9 +268,7 @@ background-size: cover;
     background-size: cover;
 }
 }
-
 //footer section begins
-
 .footer__container {
     background-color: $primary-background--dark;
     color: $text-color--primary;
@@ -303,9 +277,9 @@ background-size: cover;
     }
     @include desktop {
         position: relative;
+        padding-bottom: 2%;
     }
 }
-
 .footer__container--social {
     @include tablet {
         display: flex;
@@ -314,58 +288,66 @@ background-size: cover;
     @include desktop {
         display: flex;
         align-items: center;
+        width: 50%;
+        margin-left: 6.5%;
+        padding: .625rem 0;
     }
 }
-
 .footer__header {
-    padding: 24px 16px 16px 16px;
+    padding: 1.5rem 1rem 1rem 1rem;
     @include tablet {
-        padding: 24px 16px 16px 25px;
+        padding: 1.5rem 1rem 1rem 1.5625rem;
     }
     @include desktop {
-        padding: 24px 16px 16px 25px;
+        padding: 1.5rem 1rem 1rem 1.5625rem;
     }
 }
-
- .social__icon-container {
-    padding-bottom: 16px;
+.social__icon-container {
+    padding-bottom: 1rem;
     display: flex;
     width: 40vw;
     justify-content: space-between;
     @include tablet {
-        padding: 0 0 0 5px;
+        padding: 0 0 0 .3125rem;
         width: 20vw;
     }
     @include desktop {
-        padding-bottom: 0;//add some here
+        padding-bottom: 0;
         width: 20vw;
+        justify-content: center;
+        margin-left: -5%;
     }
- }
-
-  .social__icon {
-     padding-left: 16px;
+}
+.social__icon {
+     padding-left: 1rem;
+     @include desktop {
+        padding-left: 3.125rem;
+     }
   }
-
-  .footer__contacts-container {
-    padding: 0 0 16px 16px;
+.footer__contacts-container {
+    padding: 0 0 1rem 1rem;
     @include tablet {
         display: flex;
         justify-content: space-around;
     }
+    @include desktop {
+        display: flex;
+        justify-content: space-around;
+    }
   }
-
- .footer__management {
+.footer__management {
      @include tablet {
         width: 30vw;
     }
     @include desktop {
-        display: flex;
+        width: 30vw;
     }
  }
 
-  .footer__contact {
-    padding-bottom: 16px;
-    
+.footer__contact {
+    padding-bottom: 1rem;
+    @include desktop {
+    }
     &--address {
         font-style: normal;
     }
@@ -374,22 +356,44 @@ background-size: cover;
         color: white;
     }
   }
-
 .navbar__logo--footer {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
     @include tablet {
         position: absolute;
         left: 80%;
         bottom: 80%;
     }
+    @include desktop {
+        position: absolute;
+        left: 80%;
+        bottom: 77%;
+    }
 }
-
 .footer__logo {
-    padding: 0 0 16px 16px;
+    padding: 0 0 1rem 1rem;
 }
-
 .footer__contact--closing {
+    font-size: .75rem;
     @include tablet {
-        padding-left: 10px;
+        padding-left: .625rem;
+    }
+    @include desktop {
+        padding-left: 7.5%;
+        padding-top: 2%;
+    }
+}
+.footer-contact__spacing--primary {
+    @include desktop {
+        padding-left: 20%;
+    }
+}
+.footer-contact__spacing--secondary {
+    @include desktop {
+        margin-left: -20%;
+    }
+}
+.footer-contact__spacing--final {
+    @include desktop {
+        margin-left: -60%;
     }
 }

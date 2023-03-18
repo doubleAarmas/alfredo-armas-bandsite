@@ -20,126 +20,126 @@
   font-weight: 400;
 }
 .page__header {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   font-family: "Avenir Next";
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .page__header {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .page__header {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
 }
 
 .section__header {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   font-family: "Avenir Next";
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .section__header {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .section__header {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
 }
 
 .section__subheader {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
   font-family: "Avenir Next";
-  padding-left: 16px;
+  padding-left: 1rem;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .section__subheader {
-    font-size: 24px;
-    line-height: 32px;
-    padding-left: 85px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-left: 5.3125rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .section__subheader {
-    font-size: 24px;
-    line-height: 32px;
-    padding-left: 120px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-left: 7.5rem;
   }
 }
 
 .navbar__subheader {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
   font-family: "Avenir Next";
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .navbar__subheader {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.25rem;
+    line-height: 2rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .navbar__subheader {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
 .label__header {
-  font-size: 10px;
-  line-height: 20px;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
   font-weight: 700;
   font-family: "Avenir Next";
 }
 
 p {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: 400;
   font-family: "Avenir Next";
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
 footer p {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: 400;
   font-family: "Avenir Next";
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   footer p {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   footer p {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -148,39 +148,39 @@ footer p {
 }
 
 .bio__quote--text {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 600;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .bio__quote--text {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.125rem;
     font-weight: 600;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .bio__quote--text {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.125rem;
     font-weight: 600;
   }
 }
 
 .bio__quote--final {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 600;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .bio__quote--final {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .bio__quote--final {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
   }
 }
@@ -224,8 +224,8 @@ footer p {
 .navbar__logo {
   height: 8vh;
   width: 100%;
-  padding: 16px;
-  margin: 16px 0;
+  padding: 1rem;
+  margin: 1rem 0;
 }
 
 .navbar__links-container {
@@ -244,8 +244,8 @@ footer p {
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .navbar__links-container {
-    width: 30%;
-    max-width: 30%;
+    width: 20%;
+    max-width: 20%;
   }
 }
 
@@ -264,20 +264,20 @@ footer p {
 }
 .navbar__links--active {
   border-bottom: 4px solid #FFFFFF;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   width: 100%;
   max-width: 100%;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .navbar__links--active {
-    padding: 0 16px 0 0;
-    width: 40%;
-    max-width: 40%;
+    padding: 0 1rem 0 0;
+    width: 30%;
+    max-width: 30%;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .navbar__links--active {
-    padding: 0 16px 0 0;
+    padding: 0 1rem 0 0;
     width: 40%;
     max-width: 40%;
   }
@@ -287,9 +287,9 @@ footer p {
 }
 .navbar__links--inactive:hover {
   border-bottom: 4px solid #FFFFFF;
-  padding-bottom: 10px;
-  width: 30%;
-  max-width: 30%;
+  padding-bottom: 0.625rem;
+  width: 40%;
+  max-width: 40%;
 }
 
 .hero__section {
@@ -309,7 +309,7 @@ footer p {
   height: 60vw;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 16px;
+  padding-left: 1rem;
 }
 
 .hero__title {
@@ -324,38 +324,38 @@ footer p {
   .hero__title {
     margin-left: 10%;
     margin-bottom: 2%;
-    font-size: 55px;
+    font-size: 3.4375rem;
   }
 }
 
 .bio__section {
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .bio__section {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .bio__section {
-    padding: 0 36px;
+    padding: 0 2.25rem;
+    position: relative;
   }
 }
 
 .bio__header {
-  padding-top: 24px;
-  padding-bottom: 16px;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .bio__header {
-    padding-top: 48px;
-    padding-bottom: 36px;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .bio__header {
-    padding-top: 48px;
-    padding-bottom: 36px;
+    padding: 3rem 0 2.25rem 2.5rem;
   }
 }
 
@@ -365,33 +365,36 @@ footer p {
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .bio__image {
-    padding: 0 50px;
+    padding: 0 3.125rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .bio__image {
-    padding: 0 80px;
+    width: 80vw;
+    padding: 0 2.25rem 0 6.25rem;
+    margin-left: 2%;
+    height: 50vw;
   }
 }
 
 .bio__quote {
-  padding: 16px 0;
+  padding: 1rem 0;
   width: 100%;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .bio__quote {
     width: 95%;
-    padding: 36px 0 36px 7%;
+    padding: 2.25rem 0 2.25rem 7%;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .bio__quote {
-    width: 75%;
-    padding: 36px 0 36px 7%;
+    width: 62%;
+    padding-left: 10%;
   }
 }
 .bio__quote--final {
-  padding-top: 5px;
+  padding-top: 0.3125rem;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .bio__quote--final {
@@ -401,41 +404,63 @@ footer p {
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .bio__quote--final {
     padding-top: 2%;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .bio__quote--text {
+    font-size: 1.25rem;
+    word-spacing: 0.125rem;
   }
 }
 
 .text__container {
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .text__container {
     display: flex;
-    padding: 0 85px;
+    padding: 0 5.3125rem;
+    text-align: left;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .text__container {
     display: flex;
-    padding: 0 120px 20px 120px;
-    width: 95%;
+    padding: 0 7.5rem 1.25rem 10rem;
+    width: 90%;
+    text-align: left;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .text__section--lower {
-    padding-left: 20px;
+    padding-left: 1.25rem;
+    text-align: left;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .text__section--lower {
-    padding-left: 30px;
+    padding-left: 2.1875rem;
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .text__subheader {
+    padding: 2.5% 0 0 3%;
   }
 }
 
 .text__section {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
+  .text__section {
+    display: flex;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
   .text__section {
     display: flex;
   }
@@ -471,11 +496,11 @@ footer p {
 }
 
 .photo__header {
-  padding: 24px 16px 16px 16px;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .photo__header {
-    padding: 24px 16px 16px 56px;
+    padding: 1.5rem 1rem 1rem 3.5rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
@@ -487,8 +512,8 @@ footer p {
 .photo__image {
   width: 100%;
   height: 60vw;
-  padding: 0 16px;
-  margin-bottom: 16px;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
   background-size: cover;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
@@ -518,6 +543,7 @@ footer p {
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .footer__container {
     position: relative;
+    padding-bottom: 2%;
   }
 }
 
@@ -531,32 +557,35 @@ footer p {
   .footer__container--social {
     display: flex;
     align-items: center;
+    width: 50%;
+    margin-left: 6.5%;
+    padding: 0.625rem 0;
   }
 }
 
 .footer__header {
-  padding: 24px 16px 16px 16px;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .footer__header {
-    padding: 24px 16px 16px 25px;
+    padding: 1.5rem 1rem 1rem 1.5625rem;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .footer__header {
-    padding: 24px 16px 16px 25px;
+    padding: 1.5rem 1rem 1rem 1.5625rem;
   }
 }
 
 .social__icon-container {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
   display: flex;
   width: 40vw;
   justify-content: space-between;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .social__icon-container {
-    padding: 0 0 0 5px;
+    padding: 0 0 0 0.3125rem;
     width: 20vw;
   }
 }
@@ -564,17 +593,30 @@ footer p {
   .social__icon-container {
     padding-bottom: 0;
     width: 20vw;
+    justify-content: center;
+    margin-left: -5%;
   }
 }
 
 .social__icon {
-  padding-left: 16px;
+  padding-left: 1rem;
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .social__icon {
+    padding-left: 3.125rem;
+  }
 }
 
 .footer__contacts-container {
-  padding: 0 0 16px 16px;
+  padding: 0 0 1rem 1rem;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
+  .footer__contacts-container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
   .footer__contacts-container {
     display: flex;
     justify-content: space-around;
@@ -588,12 +630,12 @@ footer p {
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .footer__management {
-    display: flex;
+    width: 30vw;
   }
 }
 
 .footer__contact {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 .footer__contact--address {
   font-style: normal;
@@ -604,7 +646,7 @@ footer p {
 }
 
 .navbar__logo--footer {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .navbar__logo--footer {
@@ -613,13 +655,47 @@ footer p {
     bottom: 80%;
   }
 }
-
-.footer__logo {
-  padding: 0 0 16px 16px;
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .navbar__logo--footer {
+    position: absolute;
+    left: 80%;
+    bottom: 77%;
+  }
 }
 
+.footer__logo {
+  padding: 0 0 1rem 1rem;
+}
+
+.footer__contact--closing {
+  font-size: 0.75rem;
+}
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .footer__contact--closing {
-    padding-left: 10px;
+    padding-left: 0.625rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .footer__contact--closing {
+    padding-left: 7.5%;
+    padding-top: 2%;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .footer-contact__spacing--primary {
+    padding-left: 20%;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .footer-contact__spacing--secondary {
+    margin-left: -20%;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .footer-contact__spacing--final {
+    margin-left: -60%;
   }
 }/*# sourceMappingURL=bio.css.map */
