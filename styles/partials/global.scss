@@ -1,0 +1,227 @@
+@use '../partials/mix-ins' as *;
+@use '../partials/variables' as *;
+@use '../partials/typography' as *;
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar__container {
+    width: 100%;
+    background-color: $primary-background--dark;
+    color: $text-color--primary;
+         @include  tablet {
+            display:flex;
+    }
+         @include desktop {
+            display:flex;
+         }
+    }
+    
+    .navbar__logo-container{
+        width: 100%;
+        @include tablet {
+            width: 25%;
+        } 
+        @include desktop {
+            width: 30%;
+        }
+    }
+    
+    .navbar__logo {
+    height: 8vh;
+    width: 100%;
+    padding: 1rem;
+    margin:1rem 0;
+    }
+    
+    .navbar__links-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style-type: none;
+        text-align: center;
+        width: 100%;
+    
+        @include tablet {
+            width: 40%;
+            max-width: 40%;
+        }
+    
+        @include desktop {
+            width: 20%;
+            max-width: 20%;
+        }
+    }
+    
+    .navbar__links {
+        width: 100%;
+        color: $text-color--primary;
+        @include tablet {
+            //this is affecting the border line
+            margin: 10% 0 0 15%;
+        }
+        @include desktop {
+            //this is affecting the border line
+            margin-top: 8%;
+        }
+        &--active {
+            border-bottom: 4px solid $text-color--primary;
+            padding-bottom: .625rem;
+            width: 100%;
+            max-width: 100%;
+            @include tablet {
+                padding: 0 1rem 0 0;
+                width: 30%;
+                max-width: 30%;
+            }
+            @include desktop {
+                padding: 0 1rem 0 0;
+                width: 40%;
+                max-width: 40%;
+            }
+        }
+        &--inactive {
+            color: $text-color--secondary;
+            &:hover {
+                border-bottom: 4px solid $text-color--primary;
+            padding-bottom: .625rem;
+            width: 40%;
+            max-width: 40%;
+            }
+        }
+    }
+
+    //footer section begins
+.footer__container {
+    background-color: $primary-background--dark;
+    color: $text-color--primary;
+    @include tablet {
+        position: relative;
+    }
+    @include desktop {
+        position: relative;
+        padding-bottom: 2%;
+    }
+}
+.footer__container--social {
+    @include tablet {
+        display: flex;
+        align-items: center;
+    }
+    @include desktop {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        margin-left: 6.5%;
+        padding: .625rem 0;
+    }
+}
+.footer__header {
+    padding: 1.5rem 1rem 1rem 1rem;
+    @include tablet {
+        padding: 1.5rem 1rem 1rem 1.5625rem;
+    }
+    @include desktop {
+        padding: 1.5rem 1rem 1rem 1.5625rem;
+    }
+}
+.social__icon-container {
+    padding-bottom: 1rem;
+    display: flex;
+    width: 40vw;
+    justify-content: space-between;
+    @include tablet {
+        padding: 0 0 0 .3125rem;
+        width: 20vw;
+    }
+    @include desktop {
+        padding-bottom: 0;
+        width: 20vw;
+        justify-content: center;
+        margin-left: -5%;
+    }
+}
+.social__icon {
+     padding-left: 1rem;
+     @include desktop {
+        padding-left: 3.125rem;
+     }
+  }
+.footer__contacts-container {
+    padding: 0 0 1rem 1rem;
+    @include tablet {
+        display: flex;
+        justify-content: space-around;
+    }
+    @include desktop {
+        display: flex;
+        justify-content: space-around;
+    }
+  }
+.footer__management {
+     @include tablet {
+        width: 30vw;
+    }
+    @include desktop {
+        width: 30vw;
+    }
+ }
+
+.footer__contact {
+    padding-bottom: 1rem;
+    @include desktop {
+    }
+    &--address {
+        font-style: normal;
+    }
+    &--emails {
+        text-decoration: none;
+        color: white;
+    }
+  }
+.navbar__logo--footer {
+    padding-bottom: 1rem;
+    @include tablet {
+        position: absolute;
+        left: 80%;
+        bottom: 80%;
+    }
+    @include desktop {
+        position: absolute;
+        left: 80%;
+        bottom: 77%;
+    }
+}
+.footer__logo {
+    padding: 0 0 1rem 1rem;
+}
+.footer__contact--closing {
+    font-size: .75rem;
+    @include tablet {
+        padding-left: .625rem;
+    }
+    @include desktop {
+        padding-left: 7.5%;
+        padding-top: 2%;
+    }
+}
+.footer-contact__spacing--primary {
+    @include desktop {
+        padding-left: 20%;
+    }
+}
+.footer-contact__spacing--secondary {
+    @include desktop {
+        margin-left: -20%;
+    }
+}
+.footer-contact__spacing--final {
+    @include desktop {
+        margin-left: -60%;
+    }
+}

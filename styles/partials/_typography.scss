@@ -104,7 +104,7 @@
     font-family: 'Avenir Next';
 }
 
-p {
+.basic-text__format {
     font-size: .8125rem;
     line-height: 1.125rem;
     font-weight: 400;
@@ -119,7 +119,7 @@ p {
     }
 }
 
-footer p {
+.footer-basic-text__format {
     font-size: .8125rem;
     line-height: 1.125rem;
     font-weight: 400;
@@ -170,3 +170,6 @@ footer p {
     }
 }
 
+a {
+    text-decoration: none;
+}
