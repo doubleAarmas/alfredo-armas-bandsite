@@ -1,0 +1,67 @@
+@use './partials/global';
+@use './partials/variables' as *;
+@use './partials/mix-ins' as *;
+@use './partials/typography' as *;
+
+
+.hero__section{
+    display: flex;
+    flex-direction: column;
+    height: 100vw;
+     width: 100%;
+    background-image: url(/Assets/images/hero-shows.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .hero__section--overlay {
+        display: flex;
+        flex-direction: column;
+        background-color: #32323280;
+        height: 100vw;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+    .hero__title {
+        color: $text-color--primary;
+        width: 75vw;
+        height: 100vh;
+        padding: 10% 0 0 4%;
+        @include tablet {
+            margin-left: 20%;
+        }
+        @include desktop {
+            margin-left: 10%;
+            margin-bottom: 2%;
+            font-size: 3.4375rem;
+        }
+    }
+.section__header--shows {
+    font-size: 26px;
+    line-height: 2rem;
+    font-family: 'Avenir Next';
+    font-weight: 600;
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+    @include desktop {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+}
+
+    .text__subheader {
+        font-weight: 600;
+        color: $text-color--primary;
+        height: 13vh;
+        padding: 10% 0 0 4%;
+    }
+
+.media__player {
+    width: 95%;
+    height:100px;
+    padding: 0 0 5% 7%;
+    position: relative;
+    bottom: 150px;
+}

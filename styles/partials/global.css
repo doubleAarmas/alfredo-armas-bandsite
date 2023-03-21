@@ -19,6 +19,12 @@
   font-style: normal;
   font-weight: 400;
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .page__header {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -143,10 +149,6 @@
   }
 }
 
-.footer__subheader {
-  font-weight: 600;
-}
-
 .bio__quote--text {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -187,12 +189,6 @@
 
 a {
   text-decoration: none;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
 .navbar__container {

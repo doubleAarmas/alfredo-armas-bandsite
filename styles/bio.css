@@ -19,6 +19,12 @@
   font-style: normal;
   font-weight: 400;
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .page__header {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -143,8 +149,9 @@
   }
 }
 
-.footer__subheader {
+.text__subheader {
   font-weight: 600;
+  color: #FFFFFF;
 }
 
 .bio__quote--text {
@@ -187,12 +194,6 @@
 
 a {
   text-decoration: none;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
 .navbar__container {
@@ -622,7 +623,7 @@ a {
 
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .text__subheader {
-    padding: 2.5% 0 0 3%;
+    padding: 2.5% 0 0 0;
   }
 }
 
