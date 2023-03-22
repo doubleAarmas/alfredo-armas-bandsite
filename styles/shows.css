@@ -520,17 +520,46 @@ a {
   }
 }
 
-.text__subheader {
-  font-weight: 600;
+.text__subheader--hero {
+  font-weight: 500;
   color: #FFFFFF;
   height: 13vh;
   padding: 10% 0 0 4%;
 }
 
+.text__subheader {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
 .media__player {
-  width: 95%;
+  width: 100%;
   height: 100px;
-  padding: 0 0 5% 7%;
+  padding: 0 3% 5% 7%;
   position: relative;
   bottom: 150px;
+}
+
+.show__header {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+}
+
+.showsList {
+  list-style-type: none;
+  padding: 5% 0;
+}
+
+.showsButton {
+  width: 90%;
+  padding: 4% 0;
+  background-color: #323232;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Avenir Next";
+  border-radius: 5px;
+  cursor: pointer;
 }/*# sourceMappingURL=shows.css.map */
