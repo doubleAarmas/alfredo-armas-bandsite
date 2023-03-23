@@ -699,4 +699,70 @@ a {
     height: 20vw;
     background-size: cover;
   }
+}
+
+.comment__section--header {
+  padding: 5% 0 5% 7%;
+  font-family: "Avenir Next";
+}
+
+.form-container__personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment__item {
+  display: flex;
+  flex-direction: column;
+  color: #AFAFAF;
+  padding-bottom: 3%;
+}
+
+.comment__name {
+  display: flex;
+  flex-direction: column;
+  color: #AFAFAF;
+  width: 100%;
+}
+
+.name__container {
+  padding: 0 0 5% 15%;
+}
+
+.name__box {
+  width: 75vw;
+  padding: 5% 0 0 3%;
+  border-radius: 5px;
+  border: 1px solid #AFAFAF;
+  background-color: #FAFAFA;
+}
+
+.comment__container {
+  padding: 0 0 0 15%;
+}
+
+.comment__box {
+  height: 30vw;
+  width: 75vw;
+  padding: 3% 0 0 3%;
+  border-radius: 5px;
+  border: 1px solid #AFAFAF;
+  background-color: #FAFAFA;
+}
+
+.comment__button--container {
+  width: 100%;
+  padding: 7% 0 7% 20%;
+}
+
+.comment__button {
+  color: #FFFFFF;
+  background-color: #323232;
+  width: 94%;
+  padding: 3% 0;
+  font-family: "Avenir Next";
+  font-weight: 600;
+  border-radius: 5px;
 }/*# sourceMappingURL=bio.css.map */
