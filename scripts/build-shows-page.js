@@ -43,11 +43,14 @@ mainHeader.innerText = "Shows";
 
 const showLoops = function (array) {
   for (let i = 0; i < array.length; i++) {
+    const date = array[i].Date;
+    const venue = array[i].Venue;
+    const location = array[i].Location;
     console.log(array[i].Date + " " + array[i].Venue + " " + array[i].Location);
+
     const mainUl = document.createElement("ul");
     mainUl.classList.add("showsList");
-    mainDiv.appendChild(mainUl);
-    mainUl.innerText = "Work";
+    main.appendChild(mainUl);
 
     const dateLi = document.createElement("li");
     dateLi.classList.add("dateHeaders");
@@ -55,9 +58,9 @@ const showLoops = function (array) {
     dateLi.innerText = "Date";
 
     const firstShow = document.createElement("li");
-    firstShow.classList.add("showDate");
+    firstShow.classList.add("actualDate");
     mainUl.appendChild(firstShow);
-    firstShow.innerText = "Mon Sept 06 2021";
+    firstShow.innerText = date;
 
     const firstVenue = document.createElement("li");
     firstVenue.classList.add("venue");
@@ -65,9 +68,9 @@ const showLoops = function (array) {
     firstVenue.innerText = "Venue";
 
     const actualVenue = document.createElement("li");
-    actualVenue.classList.add("venue");
+    actualVenue.classList.add("actualVenue");
     mainUl.appendChild(actualVenue);
-    actualVenue.innerText = "Ronald Lane";
+    actualVenue.innerText = venue;
 
     const firstLocation = document.createElement("li");
     firstLocation.classList.add("location");
@@ -77,11 +80,11 @@ const showLoops = function (array) {
     const firstActualLocation = document.createElement("li");
     firstActualLocation.classList.add("actualLocation");
     mainUl.appendChild(firstActualLocation);
-    firstActualLocation.innerText = "San Francisco, CA";
+    firstActualLocation.innerText = location;
 
     const firstButtonDiv = document.createElement("div");
     firstButtonDiv.classList.add("showsButtonFormatting");
-    mainDiv.appendChild(firstButtonDiv);
+    mainUl.appendChild(firstButtonDiv);
 
     const ticketsButton = document.createElement("button");
     ticketsButton.classList.add("showsButton");
@@ -89,6 +92,7 @@ const showLoops = function (array) {
     ticketsButton.innerText = "Buy Tickets";
   }
 };
+
 console.log(showLoops(shows));
 
 //not needed but testing the console
