@@ -737,6 +737,8 @@ a {
   border-radius: 5px;
   border: 1px solid #AFAFAF;
   background-color: #FAFAFA;
+  font-family: "Avenir Next";
+  font-weight: 600;
 }
 
 .comment__container {
@@ -750,6 +752,8 @@ a {
   border-radius: 5px;
   border: 1px solid #AFAFAF;
   background-color: #FAFAFA;
+  font-family: "Avenir Next";
+  font-weight: 600;
 }
 
 .comment__button--container {
