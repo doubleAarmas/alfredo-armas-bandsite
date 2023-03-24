@@ -716,6 +716,13 @@ a {
     padding: 5% 0 0 6%;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .comment__section--header {
+    font-size: 43px;
+    font-weight: 600;
+    padding: 10% 0 0 6%;
+  }
+}
 
 .comment__profile--photo {
   width: 13vw;
@@ -735,6 +742,14 @@ a {
     top: 75px;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .comment__profile--photo {
+    width: 6vw;
+    height: 6vw;
+    left: 300px;
+    top: 120px;
+  }
+}
 
 .form-container__personal {
   display: flex;
@@ -750,6 +765,11 @@ a {
     padding-top: 3%;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .form-container__personal {
+    margin: auto;
+  }
+}
 
 .comment__item {
   display: flex;
@@ -760,6 +780,11 @@ a {
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .comment__item {
     font-size: 26px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .comment__item {
+    font-size: 20px;
   }
 }
 
@@ -788,6 +813,13 @@ a {
     font-size: 16px;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .name__box {
+    width: 45vw;
+    padding: 5% 0 0 5%;
+    font-size: 20px;
+  }
+}
 
 .comment__container {
   padding: 0 0 0 15%;
@@ -808,6 +840,14 @@ a {
     width: 60vw;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .comment__box {
+    width: 45vw;
+    padding: 5% 0 0 5%;
+    font-size: 20px;
+    height: 15vw;
+  }
+}
 
 .comment__button--container {
   width: 100%;
@@ -821,6 +861,14 @@ a {
     padding: 5% 0 0 20%;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .comment__button--container {
+    width: 50%;
+    position: relative;
+    left: 145px;
+    padding: 5% 0 5% 20%;
+  }
+}
 
 .comment__button {
   color: #FFFFFF;
@@ -829,12 +877,19 @@ a {
   padding: 3% 0;
   font-family: "Avenir Next";
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 11px;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .comment__button {
     padding: 7% 15%;
     font-size: 16px;
+    width: 80%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .comment__button {
+    padding: 7% 15%;
+    font-size: 28px;
     width: 80%;
   }
 }
@@ -852,6 +907,11 @@ a {
     display: none;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .commentHeader {
+    display: none;
+  }
+}
 
 .mainHeaderText {
   font-family: "Avenir Next";
@@ -863,11 +923,18 @@ a {
   border-top: 1px solid #AFAFAF;
   border-bottom: 1px solid #AFAFAF;
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .commentContainer {
+    margin-left: 25%;
+    width: 60%;
+    padding: 0 0 3% 10%;
+  }
+}
 
 .commentImage {
   width: 13vw;
   height: 13vw;
-  background-image: url(/Assets/images/Mohan-muruge.jpg);
+  background-color: rgb(224, 221, 221);
   border-radius: 360px;
   background-size: cover;
   position: relative;
@@ -879,7 +946,15 @@ a {
     width: 8vw;
     height: 8vw;
     right: 90px;
-    top: 70px;
+    top: 50px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .commentImage {
+    width: 6vw;
+    height: 6vw;
+    right: 130px;
+    top: 40px;
   }
 }
 
@@ -888,19 +963,33 @@ a {
   font-family: "Avenir Next";
   font-weight: 700;
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .commentName {
+    padding: 0 0 10% 0;
+    font-size: 20px;
+    margin-top: -5%;
+  }
+}
 
 .commentTimestamp {
   display: flex;
   justify-content: flex-end;
   margin-top: -20%;
-  padding-left: 130%;
+  padding-left: 110%;
   color: #AFAFAF;
   font-family: "Avenir Next";
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .commentTimestamp {
     position: relative;
-    top: 25px;
+    top: 30px;
+    right: 140px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .commentTimestamp {
+    position: relative;
+    bottom: 25px;
     right: 140px;
   }
 }
@@ -914,5 +1003,12 @@ a {
   .commentText {
     font-size: 13.1px;
     font-weight: 600;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .commentText {
+    font-size: 19.6px;
+    font-weight: 500;
+    padding: 0;
   }
 }/*# sourceMappingURL=bio.css.map */

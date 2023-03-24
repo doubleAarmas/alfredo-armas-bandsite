@@ -24,11 +24,13 @@ var current_date =
 var current_time =
   date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 var date_time = current_date + " " + current_time;
+const commentMain = document.querySelector(".commentArray");
 
 //doesnt refresh page and adds the comment to the array!
 let form = document.querySelector(".form-submission");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  commentMain.innerHTML = "";
   console.log(e.target.fullName.value);
   console.log(e.target.comment.value);
   const newComment = {
@@ -43,8 +45,6 @@ form.addEventListener("submit", (e) => {
 });
 
 const createComments = function (array) {
-  const commentMain = document.querySelector(".commentArray");
-  //   commentMain.innerHTML = "";
   const commentHeader = document.createElement("div");
   commentHeader.classList.add("commentHeader");
   commentMain.appendChild(commentHeader);
