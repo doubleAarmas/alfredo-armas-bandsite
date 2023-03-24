@@ -193,6 +193,11 @@ background-size: cover;
 .comment__section--header {
     padding: 5% 0 5% 7%;
     font-family: 'Avenir Next';
+    @include tablet {
+        font-size: 50px;
+        font-weight: 600;
+        padding: 5% 0 0 6%;
+    }
 }
 
 .comment__profile--photo {
@@ -200,10 +205,16 @@ background-size: cover;
     height: 13vw;
     background-image: url(/Assets/images/Mohan-muruge.jpg);
     border-radius: 360px;
-    background-size: contain;
+    background-size: cover;
     position: relative;
     left: 10px;
     top: 67px; 
+    @include tablet {
+        width: 8vw;
+        height: 8vw; 
+        left: 130px;
+        top: 75px;
+    }
 }
 
 
@@ -212,6 +223,12 @@ background-size: cover;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include tablet {
+        height: 10%;
+        position: relative;
+        bottom: 50px;
+        padding-top: 3%;
+    }
 }
 
 .comment__item {
@@ -219,6 +236,9 @@ background-size: cover;
     flex-direction: column;
     color: $text-color--secondary;
     padding-bottom: 3%;
+    @include tablet {
+        font-size: 26px;
+    }
 }
 
 .comment__name {
@@ -226,6 +246,7 @@ background-size: cover;
     flex-direction: column;
     color: $text-color--secondary;
     width: 100%;
+    @include tablet {}
 }
 
 .name__container {
@@ -240,11 +261,14 @@ background-size: cover;
     background-color: $alternative-background;
     font-family: 'Avenir Next';
     font-weight: 600;
+    @include tablet {
+        width: 60vw;
+        font-size: 16px;
+    }
 }
 
 .comment__container {
     padding: 0 0 0 15%;
-    
 }
 
 .comment__box {
@@ -256,12 +280,21 @@ background-size: cover;
     background-color: $alternative-background;
     font-family: 'Avenir Next';
     font-weight: 600;
-    
+    @include tablet {
+        width: 60vw;
+    }
 }
 
 .comment__button--container {
     width: 100%;
     padding: 7% 0 7% 20%;
+    @include tablet{
+        width: 50%;
+        position: relative;
+        left: 145px;
+        padding: 5% 0 0 20%;
+        
+    }
 }
 
 .comment__button {
@@ -272,7 +305,11 @@ background-size: cover;
     font-family: 'Avenir Next';
     font-weight: 600;
     border-radius: 5px;
-
+    @include tablet {
+        padding: 7% 15%;
+        font-size: 16px;
+        width: 80%;
+    }
 }
 //comments section
 .commentArray {
@@ -282,6 +319,9 @@ background-size: cover;
 
 .commentHeader {
     padding: 0 0 5% 0;
+    @include tablet {
+        display: none;
+    }
 }
 //actual header class
 .mainHeaderText {
@@ -290,7 +330,7 @@ font-family: 'Avenir Next';
 
 .commentContainer{
     padding: 0 0 10% 20%;
-    width: 80%;
+    width: 92%;
     border-top: 1px solid $text-color--secondary;
     border-bottom: 1px solid $text-color--secondary;
 }
@@ -300,10 +340,16 @@ font-family: 'Avenir Next';
     height: 13vw;
     background-image: url(/Assets/images/Mohan-muruge.jpg);
     border-radius: 360px;
-    background-size: contain;
+    background-size: cover;
     position: relative;
     right: 60px;
     top: 40px;
+    @include tablet {
+        width: 8vw;
+        height: 8vw;
+        right: 90px;
+        top: 70px;
+    }
 }
 
 .commentName {
@@ -319,10 +365,20 @@ font-family: 'Avenir Next';
     padding-left: 130%;
     color: $text-color--secondary;
     font-family: 'Avenir Next';
+    @include tablet {
+        position: relative;
+        top: 25px;
+        right: 140px;
+
+    }
 }
 
 .commentText {
     font-family: 'Avenir Next';
     padding: 10% 0 0 0;
     text-align: left;
+    @include tablet {
+        font-size: 13.1px;
+        font-weight: 600;
+    }
 }
