@@ -45,6 +45,7 @@ const showLoops = function (array) {
 
     const mainUl = document.createElement("ul");
     mainUl.classList.add("showsList");
+
     main.appendChild(mainUl);
 
     const dateLi = document.createElement("li");

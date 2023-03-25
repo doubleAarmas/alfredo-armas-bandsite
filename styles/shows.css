@@ -654,6 +654,14 @@ a {
   }
 }
 
+.showsList:hover {
+  background-color: #FAFAFA;
+}
+
+.selected {
+  background-color: #FAFAFA;
+}
+
 .dateHeaders {
   padding: 2.5% 0 0 0;
   color: #AFAFAF;
@@ -793,6 +801,11 @@ a {
     padding: 5%;
     top: 20px;
   }
+}
+
+.showsButton:focus {
+  background-color: yellow;
+  color: black;
 }
 
 .lastDiv {

@@ -166,6 +166,14 @@
     }
 }
 
+.showsList:hover {
+    background-color: #FAFAFA;
+}
+
+.selected {
+    background-color: #FAFAFA;
+    }
+
 .dateHeaders {
     padding: 2.5% 0 0 0;
     color: $text-color--secondary;
@@ -280,6 +288,11 @@ right: 100px;
     }
 }
 
+.showsButton:focus{
+    background-color: yellow;
+    color: black;
+}
+
 .lastDiv {
 padding: 20%;
 }
@@ -307,8 +320,6 @@ padding: 20%;
         width: 80%;
     }
 }
-
-
 //footer subheaders
 .text__subheader {
     font-weight: 600;

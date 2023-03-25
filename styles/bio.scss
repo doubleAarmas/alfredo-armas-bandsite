@@ -209,7 +209,7 @@ background-size: cover;
     width: 13vw;
     height: 13vw;
     background-image: url(/Assets/images/Mohan-muruge.jpg);
-    border-radius: 360px;
+    border-radius: 50%;
     background-size: cover;
     position: relative;
     left: 10px;
@@ -227,7 +227,6 @@ background-size: cover;
         top: 120px;
     }
 }
-
 
 .form-container__personal {
     display: flex;
@@ -383,8 +382,8 @@ font-family: 'Avenir Next';
 .commentImage {
     width: 13vw;
     height: 13vw;
-    background-color: rgb(224, 221, 221);
-    border-radius: 360px;
+    background-color: #E1E1E1;
+    border-radius: 50%;
     background-size: cover;
     position: relative;
     right: 60px;
