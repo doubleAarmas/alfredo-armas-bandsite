@@ -35,53 +35,42 @@ const main = document.querySelector(".show__information");
 const mainDiv = document.createElement("div");
 mainDiv.classList.add("show__header--tablet");
 main.appendChild(mainDiv);
-
 const showLoops = function (array) {
   for (let i = 0; i < array.length; i++) {
     const date = array[i].Date;
     const venue = array[i].Venue;
     const location = array[i].Location;
     console.log(array[i].Date + " " + array[i].Venue + " " + array[i].Location);
-
     const mainUl = document.createElement("ul");
     mainUl.classList.add("showsList");
-
     main.appendChild(mainUl);
-
     const dateLi = document.createElement("li");
     dateLi.classList.add("dateHeaders");
     mainUl.appendChild(dateLi);
     dateLi.innerText = "Date";
-
     const firstShow = document.createElement("li");
     firstShow.classList.add("actualDate");
     mainUl.appendChild(firstShow);
     firstShow.innerText = date;
-
     const firstVenue = document.createElement("li");
     firstVenue.classList.add("venue");
     mainUl.appendChild(firstVenue);
     firstVenue.innerText = "Venue";
-
     const actualVenue = document.createElement("li");
     actualVenue.classList.add("actualVenue");
     mainUl.appendChild(actualVenue);
     actualVenue.innerText = venue;
-
     const firstLocation = document.createElement("li");
     firstLocation.classList.add("location");
     mainUl.appendChild(firstLocation);
     firstLocation.innerText = "Location";
-
     const firstActualLocation = document.createElement("li");
     firstActualLocation.classList.add("actualLocation");
     mainUl.appendChild(firstActualLocation);
     firstActualLocation.innerText = location;
-
     const firstButtonDiv = document.createElement("div");
     firstButtonDiv.classList.add("showsButtonFormatting");
     mainUl.appendChild(firstButtonDiv);
-
     const ticketsButton = document.createElement("button");
     ticketsButton.classList.add("showsButton");
     firstButtonDiv.appendChild(ticketsButton);
@@ -90,8 +79,6 @@ const showLoops = function (array) {
 };
 
 console.log(showLoops(shows));
-
-//not needed but testing the console
 //function does get glitchy and needs stretching through the media query
 //more than once sometimes
 function hideDateClasses() {
