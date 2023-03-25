@@ -100,21 +100,21 @@ console.log(showLoops(shows));
 //more than once sometimes
 function hideDateClasses() {
   const hideDateHeaders = document.querySelectorAll(".dateHeaders");
-  for (let i = 2; i < hideDateHeaders.length; i++) {
+  for (let i = 1; i < hideDateHeaders.length; i++) {
     hideDateHeaders[i].classList.add("hidden");
   }
 }
 //array for hiding the venue classes dynamically. Tablet width+
 function hideVenueClasses() {
   const hideVenueHeaders = document.querySelectorAll(".venue");
-  for (let i = 2; i < hideVenueHeaders.length; i++) {
+  for (let i = 1; i < hideVenueHeaders.length; i++) {
     hideVenueHeaders[i].classList.add("hidden");
   }
 }
 //array for hiding the location classes dynamically. Tablet width+
 function hideLocationClasses() {
   const hideLocationHeaders = document.querySelectorAll(".location");
-  for (let i = 2; i < hideLocationHeaders.length; i++) {
+  for (let i = 1; i < hideLocationHeaders.length; i++) {
     hideLocationHeaders[i].classList.add("hidden");
   }
 }
