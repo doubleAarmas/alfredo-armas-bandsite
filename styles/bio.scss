@@ -263,7 +263,6 @@ background-size: cover;
     flex-direction: column;
     color: $text-color--secondary;
     width: 100%;
-    @include tablet {}
 }
 //affects padding between the containers
 .name__container {

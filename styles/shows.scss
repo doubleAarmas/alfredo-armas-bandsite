@@ -155,7 +155,12 @@
 padding: 20%;
 }
 
-
+.hidden {
+    @include tablet {
+        display: none;
+    }
+    
+}
 
 //footer subheaders
 .text__subheader {

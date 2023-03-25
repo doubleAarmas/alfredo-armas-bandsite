@@ -26,7 +26,7 @@ var current_time =
 var date_time = current_date + " " + current_time;
 const commentMain = document.querySelector(".commentArray");
 
-//doesnt refresh page and adds the comment to the array!
+//doesnt refresh page and adds the comment to the array while removing the old!
 let form = document.querySelector(".form-submission");
 form.addEventListener("submit", (e) => {
   e.preventDefault();

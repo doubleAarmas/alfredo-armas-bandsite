@@ -96,3 +96,34 @@ const showLoops = function (array) {
 console.log(showLoops(shows));
 
 //not needed but testing the console
+//function does get glitchy and needs stretching through the media query
+//more than once sometimes
+function hideDateClasses() {
+  const hideDateHeaders = document.querySelectorAll(".dateHeaders");
+  for (let i = 2; i < hideDateHeaders.length; i++) {
+    hideDateHeaders[i].classList.add("hidden");
+  }
+}
+//array for hiding the venue classes dynamically. Tablet width+
+function hideVenueClasses() {
+  const hideVenueHeaders = document.querySelectorAll(".venue");
+  for (let i = 2; i < hideVenueHeaders.length; i++) {
+    hideVenueHeaders[i].classList.add("hidden");
+  }
+}
+//array for hiding the location classes dynamically. Tablet width+
+function hideLocationClasses() {
+  const hideLocationHeaders = document.querySelectorAll(".location");
+  for (let i = 2; i < hideLocationHeaders.length; i++) {
+    hideLocationHeaders[i].classList.add("hidden");
+  }
+}
+//media query affecting when the hiding functions activate
+const mediaQuery = window.matchMedia("(max-width: 767px)");
+mediaQuery.addEventListener("change", (e) => {
+  if (e.matches) {
+    hideDateClasses();
+    hideVenueClasses();
+    hideLocationClasses();
+  }
+});
