@@ -471,6 +471,16 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .hero__section {
+    height: 80vw;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .hero__section {
+    height: 50vw;
+  }
+}
 
 .hero__section--overlay {
   display: flex;
@@ -480,6 +490,16 @@ a {
   justify-content: center;
   align-items: flex-start;
   padding-left: 1rem;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .hero__section--overlay {
+    height: 80vw;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .hero__section--overlay {
+    height: 50vw;
+  }
 }
 
 .hero__container {
@@ -508,11 +528,11 @@ a {
 }
 @media all and (min-width: 1280px) and (max-width: 1920px) {
   .hero__title {
-    margin-left: 10%;
-    margin-bottom: 2%;
-    font-size: 3.4375rem;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    width: 50vw;
+    padding: 20% 0 0 4%;
+    margin-left: 5%;
+    font-size: 70px;
+    line-height: 70px;
   }
 }
 
@@ -531,6 +551,16 @@ a {
     letter-spacing: 1px;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .text__subheader--hero {
+    width: 50vw;
+    padding: 10% 0 0 4%;
+    margin-left: 5%;
+    font-size: 30px;
+    position: relative;
+    top: 170px;
+  }
+}
 
 .media__player {
   width: 100%;
@@ -544,7 +574,15 @@ a {
     width: 70%;
     height: 100%;
     padding: 0 3% 5% 6%;
-    bottom: 40%;
+    bottom: 30%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .media__player {
+    width: 40%;
+    position: relative;
+    left: 670px;
+    bottom: 260px;
   }
 }
 
@@ -558,20 +596,41 @@ a {
 }
 
 .show__header {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0 5% 7%;
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .show__header {
+    padding: 5% 0 5% 9%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .show__header {
+    padding: 5% 0 0 9%;
+  }
+}
+
+.main__header {
   font-weight: 700;
   display: flex;
   flex-direction: column;
   padding: 16px 0 0 16px;
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  .show__header {
+  .main__header {
     padding: 5% 0 5% 8%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .main__header {
+    padding: 0 0 0 8%;
   }
 }
 
 .showsList {
   list-style-type: none;
-  padding: 1% 0 5% 5%;
+  padding: 1% 0 5% 8%;
   border-bottom: 2px solid #AFAFAF;
   font-family: "Avenir Next";
   font-weight: 600;
@@ -581,7 +640,17 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0 5% 0;
+    padding: 0 0 5% 4%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .showsList {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 0 5% 4%;
+    width: 50%;
+    margin-left: 25%;
   }
 }
 
@@ -594,6 +663,13 @@ a {
     padding: 5% 5% 8% 0;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .dateHeaders {
+    position: relative;
+    left: 200px;
+    bottom: 50px;
+  }
+}
 
 .actualDate {
   padding: 1% 0 4% 0;
@@ -603,6 +679,14 @@ a {
     position: relative;
     top: 40px;
     right: 70px;
+    padding-right: 2%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .actualDate {
+    position: relative;
+    top: 40px;
+    right: 100px;
   }
 }
 
@@ -612,7 +696,16 @@ a {
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .venue {
-    padding: 5% 0 8% 0;
+    position: relative;
+    top: 20px;
+    right: 40px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .venue {
+    position: relative;
+    left: 80px;
+    bottom: 50px;
   }
 }
 
@@ -623,7 +716,15 @@ a {
   .actualVenue {
     position: relative;
     top: 40px;
-    right: 60px;
+    right: 0;
+    padding-right: 10%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .actualVenue {
+    position: relative;
+    top: 40px;
+    right: 30px;
   }
 }
 
@@ -633,7 +734,16 @@ a {
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .location {
-    padding: 5% 0 8% 0;
+    position: relative;
+    top: 20px;
+    right: 70px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .location {
+    position: relative;
+    right: 80px;
+    bottom: 50px;
   }
 }
 
@@ -644,7 +754,14 @@ a {
   .actualLocation {
     position: relative;
     top: 40px;
-    right: 60px;
+    right: 0;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .actualLocation {
+    position: relative;
+    top: 40px;
+    left: 60px;
   }
 }
 
@@ -668,6 +785,15 @@ a {
     top: 20px;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .showsButton {
+    position: relative;
+    left: 150px;
+    width: 12vw;
+    padding: 5%;
+    top: 20px;
+  }
+}
 
 .lastDiv {
   padding: 20%;
@@ -678,8 +804,23 @@ a {
     display: none;
   }
 }
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .hidden {
+    display: none;
+  }
+}
 
+.show__section--headers {
+  display: none;
+}
 @media all and (min-width: 768px) and (max-width: 1279px) {
+  .show__section--headers {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1920px) {
   .show__section--headers {
     display: flex;
     justify-content: space-around;

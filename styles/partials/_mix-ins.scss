@@ -19,7 +19,6 @@
     }
 }
 
-
 @mixin CTA-default{
     background-color: #323232;
     color: #FFFFFF;
@@ -31,25 +30,3 @@
     color: #FFFFFF;
 }
 }
-
-
-// Desktop & Tablet
-// padding before headline 48px
-// padding after headlines 36px
-// padding between components 36px
-
-
-//Mobile
-// before headlines 24px
-// after headlines 16px
-// between components 16px
-
-// CTA button will stay at 40px through all sizes
-// width will be max of 150px for desktop and tablet. max
-// of 32px padding left and right. Mobile should be 100% of container
-
-// button radius should be 4px
-
-// Check sheet for navbar
-
-// Divider will be stroke width 1px and fill color mercury for all sizes

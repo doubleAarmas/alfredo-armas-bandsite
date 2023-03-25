@@ -33,13 +33,8 @@ const shows = [
 const main = document.querySelector(".show__information");
 //beginning of the first section
 const mainDiv = document.createElement("div");
-mainDiv.classList.add("show__header");
+mainDiv.classList.add("show__header--tablet");
 main.appendChild(mainDiv);
-
-const mainHeader = document.createElement("h1");
-mainHeader.classList.add("mainHeader");
-mainDiv.appendChild(mainHeader);
-mainHeader.innerText = "Shows";
 
 const showLoops = function (array) {
   for (let i = 0; i < array.length; i++) {
@@ -89,7 +84,7 @@ const showLoops = function (array) {
     const ticketsButton = document.createElement("button");
     ticketsButton.classList.add("showsButton");
     firstButtonDiv.appendChild(ticketsButton);
-    ticketsButton.innerText = "Buy Tickets";
+    ticketsButton.innerText = "BUY TICKETS";
   }
 };
 

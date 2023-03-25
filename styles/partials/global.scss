@@ -2,8 +2,6 @@
 @use './variables' as *;
 @use './typography' as *;
 
-
-
 * {
     padding: 0;
     margin: 0;
@@ -28,7 +26,6 @@
         line-height: 4.25rem;
     }
 }
-
 
 .section__header {
 
@@ -126,7 +123,6 @@
     font-size: 1rem;
     line-height: 1.125rem;
     font-weight: 600;
-    
 }
     @include desktop {
         font-size: 1rem;
@@ -165,7 +161,7 @@ a {
             display:flex;
          }
     }
-    
+
     .navbar__logo-container{
         width: 100%;
         @include tablet {
@@ -190,12 +186,10 @@ a {
         list-style-type: none;
         text-align: center;
         width: 100%;
-    
         @include tablet {
             width: 40%;
             max-width: 40%;
         }
-    
         @include desktop {
             width: 20%;
             max-width: 20%;

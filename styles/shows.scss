@@ -12,6 +12,13 @@
     background-image: url(/Assets/images/hero-shows.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include tablet {
+        height: 80vw;
+    }
+    @include desktop {
+        height: 50vw;
+    }
     }
     .hero__section--overlay {
         display: flex;
@@ -21,13 +28,19 @@
         justify-content: center;
         align-items: flex-start;
         padding-left: 1rem;
+        @include tablet {
+            height: 80vw;
+        }
+        @include desktop {
+            height: 50vw;
+        }
     }
 
     .hero__container {
         display: flex;
         flex-direction: column;
     }
-    //actual div of the hero title
+    //actual heading of the hero title
     .hero__title {
         color: $text-color--primary;
         width: 75vw;
@@ -45,11 +58,11 @@
             width: 85vw;
         }
         @include desktop {
-            margin-left: 10%;
-            margin-bottom: 2%;
-            font-size: 3.4375rem;
-            font-size: 2.25rem;
-            line-height: 2.75rem;
+            width: 50vw;
+            padding: 20% 0 0 4%;
+            margin-left: 5%;
+            font-size: 70px;
+            line-height: 70px;
         }
     }
 
@@ -65,6 +78,14 @@
             font-weight: 600;
             letter-spacing: 1px;
         }
+        @include desktop {
+            width: 50vw;
+            padding: 10% 0 0 4%;
+            margin-left: 5%;
+            font-size: 30px;
+            position: relative;
+            top: 170px;
+        }
     }
 
 
@@ -78,7 +99,13 @@
         width: 70%;
         height: 100%;
         padding: 0 3% 5% 6%;
-        bottom: 40%;
+        bottom: 30%;
+    }
+    @include desktop {
+        width: 40%;
+        position: relative;
+        left: 670px;
+        bottom: 260px;
     }
 }
 
@@ -92,6 +119,18 @@
 }
 
 .show__header {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0 5% 7%;
+    @include tablet {
+        padding: 5% 0 5% 9%;
+    }
+    @include desktop {
+        padding: 5% 0 0 9%;
+    }
+}
+
+.main__header {
     font-weight: 700;
     display: flex;
     flex-direction: column;
@@ -99,11 +138,15 @@
     @include tablet {
         padding: 5% 0 5% 8%;
     }
+    @include desktop {
+        padding: 0 0 0 8%;
+
+    }
 }
 
 .showsList {
     list-style-type: none;
-    padding: 1% 0 5% 5%;
+    padding: 1% 0 5% 8%;
     border-bottom: 2px solid $text-color--secondary;
     font-family: 'Avenir Next';
     font-weight: 600;
@@ -111,7 +154,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 0 5% 0;
+        padding: 0 0 5% 4%;
+    }
+    @include desktop {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 0 5% 4%;
+        width: 50%;
+        margin-left: 25%;
     }
 }
 
@@ -121,6 +172,11 @@
     @include tablet {
         padding: 5% 5% 8% 0;
     }
+    @include desktop {
+    position: relative;
+    left: 200px;
+    bottom: 50px;
+    }
 }
 
 .actualDate {
@@ -129,6 +185,12 @@
 position: relative;
 top: 40px;
 right: 70px;
+padding-right: 2%;
+    }
+    @include desktop {
+        position: relative;
+top: 40px;
+right: 100px;
     }
 }
 
@@ -136,26 +198,46 @@ right: 70px;
     padding: 2% 0 0 0;
     color: $text-color--secondary;
 @include tablet {
-        padding: 5% 0 8% 0;
+        // padding: 5% 0 8% 8%;
+        position: relative;
+        top: 20px;
+        right: 40px;
     }
+    @include desktop {
+        position: relative;
+        left: 80px;
+        bottom: 50px;
+        }
 }
-
 
 .actualVenue {
     padding: 1% 0 4% 0;
     @include tablet {
         position: relative;
         top: 40px;
-        right: 60px;
+        right: 0;
+        padding-right: 10%;
             }
-}
+            @include desktop {
+                position: relative;
+                top: 40px;
+                right: 30px;
+                    }
+            }
 
 .location {
     padding: 2% 0 0 0;
     color: $text-color--secondary;
     @include tablet {
-        padding: 5% 0 8% 0;
+        position: relative;
+        top: 20px;
+        right: 70px;
     }
+    @include desktop {
+        position: relative;
+        right: 80px;
+        bottom: 50px;
+        }
 }
 
 .actualLocation {
@@ -163,8 +245,13 @@ right: 70px;
     @include tablet {
         position: relative;
         top: 40px;
-        right: 60px;
+        right: 0;
             }
+     @include desktop {
+        position: relative;
+        top: 40px;
+        left: 60px;
+                    }
 }
 
 .showsButton {
@@ -184,6 +271,13 @@ right: 70px;
         padding: 6%;
         top: 20px;
     }
+    @include desktop {
+        position: relative;
+        left: 150px;
+        width: 12vw;
+        padding: 5%;
+        top: 20px;
+    }
 }
 
 .lastDiv {
@@ -194,12 +288,20 @@ padding: 20%;
     @include tablet {
         display: none;
     }
-    
+    @include desktop {
+        display: none;
+    }
 }
 
 
 .show__section--headers {
+    display: none;
     @include tablet{
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+    }
+    @include desktop{
         display: flex;
         justify-content: space-around;
         width: 80%;
