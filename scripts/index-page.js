@@ -11,10 +11,10 @@ function getPosts() {
       comments = response.data;
       createComments(comments);
       console.log(comments);
+    })
+    .catch((errors) => {
+      console.error("errors: ", errors);
     });
-  // catch (errors) {
-  //   console.error(errors);
-  // }
 }
 //posting the newest comment and updating with the initial comments
 getPosts();
@@ -33,6 +33,9 @@ function addPost(newComment) {
       createComments(comments);
       console.log(response);
       getPosts();
+    })
+    .catch((errors) => {
+      console.error("errors: ", errors);
     });
 }
 

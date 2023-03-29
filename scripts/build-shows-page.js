@@ -1,16 +1,20 @@
 let shows = [];
-
-axios
-  .get(
-    "https://project-1-api.herokuapp.com/showdates?api_key=88092a44-09c3-434e-b610-10a7355a53ae"
-  )
-  .then((response) => {
-    console.log("response: ", response);
-    shows = response.data;
-    showLoops(shows);
-    console.log(shows);
-  });
-
+function getData() {
+  axios
+    .get(
+      "https://project-1-api.herokuapp.com/showdates?api_key=88092a44-09c3-434e-b610-10a7355a53ae"
+    )
+    .then((response) => {
+      console.log("response: ", response);
+      shows = response.data;
+      showLoops(shows);
+      console.log(shows);
+    })
+    .catch((errors) => {
+      console.error("errors: ", errors);
+    });
+}
+getData();
 const main = document.querySelector(".show__information");
 //beginning of the first section
 const mainDiv = document.createElement("div");
@@ -18,9 +22,9 @@ mainDiv.classList.add("show__header--tablet");
 main.appendChild(mainDiv);
 const showLoops = function (array) {
   for (let i = 0; i < array.length; i++) {
-    let date = array[i].Date;
-    let venue = array[i].Venue;
-    let location = array[i].Location;
+    let date = array[i].date;
+    let venue = array[i].place;
+    let location = array[i].location;
     console.log(array[i].Date + " " + array[i].Venue + " " + array[i].Location);
     const mainUl = document.createElement("ul");
     //actual shows row
