@@ -110,3 +110,29 @@ mediaQuery.addEventListener("change", (e) => {
     hideLocationClasses();
   }
 });
+
+function toggleClass() {
+  const selected = document.querySelectorAll(".showsList");
+  selected.classList.toggle("selected");
+}
+
+//highlights the row to be selected on click
+const selected = document.querySelectorAll(".showsList");
+
+selected.forEach((showsList) => {
+  showsList.addEventListener("click", function handleClick(event) {
+    console.log("row clicked", event);
+    showsList.setAttribute("style", "background-color: yellow;");
+  });
+});
+
+// //removes the highlighting to the selected row
+// const unselected = document.querySelectorAll(".selected");
+
+// if (selected === classList(".selected"))
+//   selected.forEach((showsList) => {
+//     showsList.addEventListener("click", function handleClick(event) {
+//       console.log("row clicked", event);
+//       showsList.removeAttribute("style", "background-color: yellow;");
+//     });
+//   });
