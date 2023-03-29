@@ -1,35 +1,16 @@
-const shows = [
-  {
-    Date: "Mon Sept 06 2021",
-    Venue: "Ronald Lane",
-    Location: "San Francisco, CA",
-  },
-  {
-    Date: "Tue Sept 21 2021",
-    Venue: "Pier 3 East",
-    Location: "San Francisco, CA",
-  },
-  {
-    Date: "Fri Oct 15 2021",
-    Venue: "View Lounge",
-    Location: "San Francisco, CA",
-  },
-  {
-    Date: "Sat Nov 06 2021",
-    Venue: "Hyatt Agency",
-    Location: "San Francisco, CA",
-  },
-  {
-    Date: "Fri Nov 26 2021",
-    Venue: "Moscow Center",
-    Location: "San Francisco, CA",
-  },
-  {
-    Date: "Wed Dec 15 2021",
-    Venue: "Press Club",
-    Location: "San Francisco, CA",
-  },
-];
+let shows = [];
+
+axios
+  .get(
+    "https://project-1-api.herokuapp.com/showdates?api_key=88092a44-09c3-434e-b610-10a7355a53ae"
+  )
+  .then((response) => {
+    console.log("response: ", response);
+    shows = response.data;
+    showLoops(shows);
+    console.log(shows);
+  });
+
 const main = document.querySelector(".show__information");
 //beginning of the first section
 const mainDiv = document.createElement("div");
@@ -37,13 +18,15 @@ mainDiv.classList.add("show__header--tablet");
 main.appendChild(mainDiv);
 const showLoops = function (array) {
   for (let i = 0; i < array.length; i++) {
-    const date = array[i].Date;
-    const venue = array[i].Venue;
-    const location = array[i].Location;
+    let date = array[i].Date;
+    let venue = array[i].Venue;
+    let location = array[i].Location;
     console.log(array[i].Date + " " + array[i].Venue + " " + array[i].Location);
     const mainUl = document.createElement("ul");
+    //actual shows row
     mainUl.classList.add("showsList");
     main.appendChild(mainUl);
+    //dates for the show
     const dateLi = document.createElement("li");
     dateLi.classList.add("dateHeaders");
     mainUl.appendChild(dateLi);
@@ -52,6 +35,7 @@ const showLoops = function (array) {
     firstShow.classList.add("actualDate");
     mainUl.appendChild(firstShow);
     firstShow.innerText = date;
+    //venue for the show
     const firstVenue = document.createElement("li");
     firstVenue.classList.add("venue");
     mainUl.appendChild(firstVenue);
@@ -60,6 +44,7 @@ const showLoops = function (array) {
     actualVenue.classList.add("actualVenue");
     mainUl.appendChild(actualVenue);
     actualVenue.innerText = venue;
+    //location for the show
     const firstLocation = document.createElement("li");
     firstLocation.classList.add("location");
     mainUl.appendChild(firstLocation);
@@ -78,7 +63,6 @@ const showLoops = function (array) {
   }
 };
 
-console.log(showLoops(shows));
 //function does get glitchy and needs stretching through the media query
 //more than once sometimes
 function hideDateClasses() {
@@ -110,11 +94,6 @@ mediaQuery.addEventListener("change", (e) => {
     hideLocationClasses();
   }
 });
-
-function toggleClass() {
-  const selected = document.querySelectorAll(".showsList");
-  selected.classList.toggle("selected");
-}
 
 //highlights the row to be selected on click
 const selected = document.querySelectorAll(".showsList");

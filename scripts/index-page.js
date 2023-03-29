@@ -1,52 +1,40 @@
-let comments = [
-  //   {
-  //     name: "Connor Walton",
-  //     timestamp: "02/17/2021",
-  //     comment:
-  //       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  //   },
-  //   {
-  //     name: "Emilie Beach",
-  //     timestamp: "01/09/2021",
-  //     comment:
-  //       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  //   },
-  //   {
-  //     name: "Miles Acosta",
-  //     timestamp: "12/20/2020",
-  //     comment:
-  //       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  //   },
-];
+let comments = [];
 
 //trying to get the information
-
-axios
-  .get(
-    "https://project-1-api.herokuapp.com/comments?api_key=88092a44-09c3-434e-b610-10a7355a53ae"
-  )
-  .then((response) => {
-    console.log("response: ", response);
-    comments = response.data;
-    createComments(comments);
-
-    console.log(comments);
-  });
-// function addPost() {
-//   axios
-//     .post(
-//       "https://project-1-api.herokuapp.com/comments?api_key=88092a44-09c3-434e-b610-10a7355a53ae",
-//       {
-//         name: "Kenji",
-//         commentText: "hola este es Mauro",
-//       }
-//     )
-//     .then(response => showOutput(response));
-//       console.log(response);
-//     .catch(error => console.error((error));
-//     console.log(error);
-
-// }
+function getPosts() {
+  axios
+    .get(
+      "https://project-1-api.herokuapp.com/comments?api_key=88092a44-09c3-434e-b610-10a7355a53ae"
+    )
+    .then((response) => {
+      console.log("response: ", response);
+      comments = response.data;
+      createComments(comments);
+      console.log(comments);
+    });
+  // catch (errors) {
+  //   console.error(errors);
+  // }
+}
+//posting the newest comment and updating with the initial comments
+getPosts();
+function addPost(newComment) {
+  console.log(newComment);
+  axios
+    .post(
+      "https://project-1-api.herokuapp.com/comments?api_key=88092a44-09c3-434e-b610-10a7355a53ae",
+      {
+        name: newComment.name,
+        comment: newComment.commentText,
+      }
+    )
+    .then((response) => {
+      comments = response.data;
+      createComments(comments);
+      console.log(response);
+      getPosts();
+    });
+}
 
 //time relative
 function timeDifference(current, previous) {
@@ -72,8 +60,7 @@ function timeDifference(current, previous) {
     return "approximately " + Math.round(elapsed / msPerYear) + " years ago";
   }
 }
-
-//form creation
+//date conversion before axios
 var date = new Date();
 var current_date =
   date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
@@ -81,6 +68,7 @@ var current_time =
   date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 var date_time = current_date + " " + current_time;
 const commentMain = document.querySelector(".commentArray");
+//form creation
 //doesnt refresh page and adds the comment to the array while removing the old!
 let form = document.querySelector(".form-submission");
 form.addEventListener("submit", (e) => {
@@ -93,24 +81,18 @@ form.addEventListener("submit", (e) => {
     timestamp: current_date,
     commentText: e.target.comment.value,
   };
-  comments.unshift(newComment);
   console.log(comments);
   createComments(comments);
+  addPost(newComment);
+  comments.unshift(newComment);
   e.target.reset();
 });
 const createComments = function (array) {
-  const commentHeader = document.createElement("div");
-  commentHeader.classList.add("commentHeader");
-  commentMain.appendChild(commentHeader);
-  const commentHeaderText = document.createElement("h1");
-  commentHeaderText.classList.add("mainHeaderText");
-  commentHeaderText.innerText = "Comments";
-  commentHeader.appendChild(commentHeaderText);
   for (let i = 0; i < array.length; i++) {
     const comment = array[i];
     const commentContainer = document.createElement("div");
     commentContainer.classList.add("commentContainer");
-    commentMain.appendChild(commentContainer);
+    commentMain.prepend(commentContainer);
     // creating the comment image section
     const commentImage = document.createElement("div");
     commentImage.classList.add("commentImage");
@@ -144,4 +126,3 @@ const createComments = function (array) {
     commentTextBox.appendChild(commentText);
   }
 };
-createComments(comments);
