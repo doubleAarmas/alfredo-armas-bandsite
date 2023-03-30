@@ -16,8 +16,9 @@ function getPosts() {
       console.error("errors: ", errors);
     });
 }
-//posting the newest comment and updating with the initial comments
 getPosts();
+
+//posting the newest comment and updating with the initial comments
 function addPost(newComment) {
   console.log(newComment);
   axios
@@ -79,6 +80,13 @@ form.addEventListener("submit", (e) => {
   commentMain.innerHTML = "";
   console.log(e.target.fullName.value);
   console.log(e.target.comment.value);
+  //validators here
+  //     if (username.value ===''){
+  //         showError(username, 'Username is required');
+  //     }
+  //     else {
+  //         showSuccess(username);
+  //     }
   const newComment = {
     name: e.target.fullName.value,
     timestamp: current_date,

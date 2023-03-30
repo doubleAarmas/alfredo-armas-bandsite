@@ -822,6 +822,10 @@ a {
   }
 }
 
+.name__box:focus {
+  border: 1px solid #323232;
+}
+
 .comment__container {
   padding: 0 0 0 15%;
 }
@@ -848,6 +852,10 @@ a {
     font-size: 20px;
     height: 15vw;
   }
+}
+
+.comment__box:focus {
+  border: 1px solid #323232;
 }
 
 .comment__button--container {
