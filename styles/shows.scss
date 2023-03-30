@@ -157,7 +157,7 @@
         justify-content: flex-end;
         align-items: center;
         padding: 0 0 5% 4%;
-        width: 50%;
+        width: 60%;
         margin-left: 25%;
     }
 }
@@ -166,8 +166,9 @@
     background-color: #FAFAFA;
 }
 
+
 .selected {
-    background-color: yellow;
+    background-color: $text-color--secondary;
 }
 
 .dateHeaders {
@@ -194,7 +195,7 @@ padding-right: 2%;
     @include desktop {
         position: relative;
 top: 40px;
-right: 100px;
+right: 230px;
     }
 }
 
@@ -224,7 +225,7 @@ right: 100px;
             @include desktop {
                 position: relative;
                 top: 40px;
-                right: 30px;
+                right: 150px;
                     }
             }
 
@@ -238,7 +239,7 @@ right: 100px;
     }
     @include desktop {
         position: relative;
-        right: 80px;
+        right: 70px;
         bottom: 50px;
         }
 }
@@ -253,7 +254,7 @@ right: 100px;
      @include desktop {
         position: relative;
         top: 40px;
-        left: 60px;
+        right: 60px;
                     }
 }
 
@@ -276,10 +277,9 @@ right: 100px;
     }
     @include desktop {
         position: relative;
-        left: 150px;
         width: 12vw;
         padding: 5%;
-        top: 20px;
+        top: 30px;
     }
 }
 

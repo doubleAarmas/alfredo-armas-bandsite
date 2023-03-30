@@ -238,6 +238,7 @@ a {
 .footer__container {
     background-color: $primary-background--dark;
     color: $text-color--primary;
+    margin-top: 10%;
     @include tablet {
         position: relative;
     }

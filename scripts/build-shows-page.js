@@ -5,10 +5,8 @@ function getData() {
       "https://project-1-api.herokuapp.com/showdates?api_key=88092a44-09c3-434e-b610-10a7355a53ae"
     )
     .then((response) => {
-      console.log("response: ", response);
       shows = response.data;
       showLoops(shows);
-      console.log(shows);
     })
     .catch((errors) => {
       console.error("errors: ", errors);
@@ -25,7 +23,6 @@ const showLoops = function (array) {
     let date = array[i].date;
     let venue = array[i].place;
     let location = array[i].location;
-    console.log(array[i].Date + " " + array[i].Venue + " " + array[i].Location);
     const mainUl = document.createElement("ul");
     //actual shows row
     mainUl.classList.add("showsList");
@@ -64,9 +61,26 @@ const showLoops = function (array) {
     ticketsButton.classList.add("showsButton");
     firstButtonDiv.appendChild(ticketsButton);
     ticketsButton.innerText = "BUY TICKETS";
+    //creating the event listener for selecting the show
+    const activeShow = document.querySelectorAll(".showsList");
+    activeShow.forEach((element) => {
+      element.addEventListener("click", () => {
+        // Remove the "selected" class from all elements first
+        activeShow.forEach((el) => {
+          el.classList.remove("selected");
+        });
+
+        // Add the "selected" class to the clicked element
+        element.classList.add("selected");
+
+        // Toggle the "selected" class when clicked again
+        element.addEventListener("click", () => {
+          element.classList.toggle("selected");
+        });
+      });
+    });
   }
 };
-
 //function does get glitchy and needs stretching through the media query
 //more than once sometimes
 function hideDateClasses() {
@@ -98,24 +112,3 @@ mediaQuery.addEventListener("change", (e) => {
     hideLocationClasses();
   }
 });
-
-//highlights the row to be selected on click
-const selected = document.querySelectorAll(".showsList");
-
-selected.forEach((showsList) => {
-  showsList.addEventListener("click", function handleClick(event) {
-    console.log("row clicked", event);
-    showsList.setAttribute("style", "background-color: yellow;");
-  });
-});
-
-// //removes the highlighting to the selected row
-// const unselected = document.querySelectorAll(".selected");
-
-// if (selected === classList(".selected"))
-//   selected.forEach((showsList) => {
-//     showsList.addEventListener("click", function handleClick(event) {
-//       console.log("row clicked", event);
-//       showsList.removeAttribute("style", "background-color: yellow;");
-//     });
-//   });

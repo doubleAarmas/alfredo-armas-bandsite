@@ -1,16 +1,13 @@
 let comments = [];
-
-//trying to get the information
+//trying to get the information from the server
 function getPosts() {
   axios
     .get(
       "https://project-1-api.herokuapp.com/comments?api_key=88092a44-09c3-434e-b610-10a7355a53ae"
     )
     .then((response) => {
-      console.log("response: ", response);
       comments = response.data;
       createComments(comments);
-      console.log(comments);
     })
     .catch((errors) => {
       console.error("errors: ", errors);
@@ -19,8 +16,7 @@ function getPosts() {
 getPosts();
 
 //posting the newest comment and updating with the initial comments
-function addPost(newComment) {
-  console.log(newComment);
+function displayComment(newComment) {
   axios
     .post(
       "https://project-1-api.herokuapp.com/comments?api_key=88092a44-09c3-434e-b610-10a7355a53ae",
@@ -32,7 +28,6 @@ function addPost(newComment) {
     .then((response) => {
       comments = response.data;
       createComments(comments);
-      console.log(response);
       getPosts();
     })
     .catch((errors) => {
@@ -78,26 +73,28 @@ let form = document.querySelector(".form-submission");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   commentMain.innerHTML = "";
-  console.log(e.target.fullName.value);
-  console.log(e.target.comment.value);
-  //validators here
-  //     if (username.value ===''){
-  //         showError(username, 'Username is required');
-  //     }
-  //     else {
-  //         showSuccess(username);
-  //     }
+  //validators for the form
+  if (
+    e.target.fullName.value.trim() === "" ||
+    e.target.comment.value.trim() === ""
+  ) {
+    alert("please fill out all of the form fields.");
+    e.target.fullName.style.border = "1px solid red";
+    e.target.comment.style.border = "1px solid red";
+
+    return;
+  }
   const newComment = {
     name: e.target.fullName.value,
     timestamp: current_date,
     commentText: e.target.comment.value,
   };
-  console.log(comments);
   createComments(comments);
-  addPost(newComment);
+  displayComment(newComment);
   comments.unshift(newComment);
   e.target.reset();
 });
+
 const createComments = function (array) {
   for (let i = 0; i < array.length; i++) {
     const comment = array[i];
