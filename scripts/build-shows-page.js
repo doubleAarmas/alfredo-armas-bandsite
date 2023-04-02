@@ -35,7 +35,7 @@ const showLoops = function (array) {
     const firstShow = document.createElement("li");
     firstShow.classList.add("actualDate");
     mainUl.appendChild(firstShow);
-    firstShow.innerText = date;
+    firstShow.innerText = new Date(date).toLocaleDateString();
     //venue for the show
     const firstVenue = document.createElement("li");
     firstVenue.classList.add("venue");
@@ -69,10 +69,8 @@ const showLoops = function (array) {
         activeShow.forEach((el) => {
           el.classList.remove("selected");
         });
-
         // Add the "selected" class to the clicked element
         element.classList.add("selected");
-
         // Toggle the "selected" class when clicked again
         element.addEventListener("click", () => {
           element.classList.toggle("selected");

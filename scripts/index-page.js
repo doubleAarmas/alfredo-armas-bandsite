@@ -7,14 +7,24 @@ function getPosts() {
     )
     .then((response) => {
       comments = response.data;
-      createComments(comments);
+      //timeline begins
+      const timeline = comments.sort(function (a, b) {
+        return a.timestamp - b.timestamp;
+      });
+      const formattedTimeline = timeline.map(function (timelinePost) {
+        return {
+          ...timelinePost,
+          content: timelinePost.body,
+        };
+      });
+      createComments(formattedTimeline);
+      //timestamp ends
     })
     .catch((errors) => {
       console.error("errors: ", errors);
     });
 }
 getPosts();
-
 //posting the newest comment and updating with the initial comments
 function displayComment(newComment) {
   axios
@@ -34,38 +44,6 @@ function displayComment(newComment) {
       console.error("errors: ", errors);
     });
 }
-
-//time relative
-function timeDifference(current, previous) {
-  var msPerMinute = 60 * 1000;
-  var msPerHour = msPerMinute * 60;
-  var msPerDay = msPerHour * 24;
-  var msPerMonth = msPerDay * 30;
-  var msPerYear = msPerDay * 365;
-
-  var elapsed = current - previous;
-
-  if (elapsed < msPerMinute) {
-    return Math.round(elapsed / 1000) + " seconds ago";
-  } else if (elapsed < msPerHour) {
-    return Math.round(elapsed / msPerMinute) + " minutes ago";
-  } else if (elapsed < msPerDay) {
-    return Math.round(elapsed / msPerHour) + " hours ago";
-  } else if (elapsed < msPerMonth) {
-    return "approximately " + Math.round(elapsed / msPerDay) + " days ago";
-  } else if (elapsed < msPerYear) {
-    return "approximately " + Math.round(elapsed / msPerMonth) + " months ago";
-  } else {
-    return "approximately " + Math.round(elapsed / msPerYear) + " years ago";
-  }
-}
-//date conversion before axios
-var date = new Date();
-var current_date =
-  date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
-var current_time =
-  date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-var date_time = current_date + " " + current_time;
 const commentMain = document.querySelector(".commentArray");
 //form creation
 //doesnt refresh page and adds the comment to the array while removing the old!
@@ -81,20 +59,17 @@ form.addEventListener("submit", (e) => {
     alert("please fill out all of the form fields.");
     e.target.fullName.style.border = "1px solid red";
     e.target.comment.style.border = "1px solid red";
-
     return;
   }
   const newComment = {
     name: e.target.fullName.value,
-    timestamp: current_date,
     commentText: e.target.comment.value,
   };
-  createComments(comments);
   displayComment(newComment);
   comments.unshift(newComment);
   e.target.reset();
 });
-
+//creating the actual elements for the comments
 const createComments = function (array) {
   for (let i = 0; i < array.length; i++) {
     const comment = array[i];
@@ -121,7 +96,9 @@ const createComments = function (array) {
     //adding the semantic tags to the div
     const commentTimestamp = document.createElement("p");
     commentTimestamp.classList.add("commentTimestamp");
-    commentTimestamp.innerText = comment.timestamp;
+    let specificDate = new Date(comment.timestamp);
+    // firstShow.innerText = new Date(date).toLocaleDateString();
+    commentTimestamp.innerText = specificDate.toLocaleDateString();
     commentTimestampBox.appendChild(commentTimestamp);
     // creating the comment text section
     const commentTextBox = document.createElement("div");
